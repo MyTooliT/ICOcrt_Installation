@@ -125,11 +125,13 @@ The machine control starts the closed loop ICOtronic control of the  machine thr
 
 After the STU is properly positioned and the cable routed, the STU  will be connected to the SPU with the Sub-9-D-plug. The power supply for the STU is realized with a Power Injector.
 
-![pi_en](assets/pi_en.jpg)
+![pi_en](assets/pi_de.jpg)
 
-The two Sub-9-D-plugs are to be connected between the STU  Sub-9-D-plug and the corresponding Sub-9-D-plug on the SPU (NI 9862).  Normally the GND of the Power Injector is marked blue and the +24V plug  is marked red or black. Connect the other cable ends of the Power  Injector to the 24V-power supply plug on the lower side of the SPU (or  directly to the 24V-power supply).
+The two Sub-9-D-plugs are to be connected between the STU Sub-9-D-plug and the corresponding Sub-9-D-plug on the SPU (NI 9862). The cable of the Power Injector is plugged into a clamp on the inside of the Power Injector. This cable and the corresponding power supply can be easily changed with another 24V power supply if wanted(For example directly to a power supply inside the machine or the 24V power supply of the SPU). To change the cable you have to screw open the casing of the Power Injector, loosen the cable from the clamp and insert another cable. The polarity of is marked on the PCB near the clamp.
 
-Additionally connect cables from the Power supply unit to this plug.  The power supply unit has pins on one side for the 24V output to power  the SPU. On the other side of this module there is the ~230V supply for  the power supply module. If you already have a 24V power supply at the  installation place of the SPU, you can take this supply instead of the  power supply module.
+![pi_pcb](assets/pi_pcb.jpg)
+
+Additionally connect cables from the Power supply unit to the 24V plug of the SPU.  The power supply unit has pins on one side for the 24V output to power  the SPU. On the other side of this module there is the ~230V supply for  the power supply module. If you already have a 24V power supply at the  installation place of the SPU, you can take this supply instead of the  power supply module.
 
 ![netzteil_en](assets/netzteil_en.jpg)
 

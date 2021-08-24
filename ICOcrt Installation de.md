@@ -122,7 +122,7 @@ Nachdem die STU im Maschinenraum fixiert und das Kabel zur SPU  verlegt wurde, m
 
 ![pi_de](assets/pi_de.jpg)
 
-Die zwei Sub-9-D-Stecker des Powerinjectors werden zwischen den  korrespondierenden Stecker des STU Kabels und der SPU (NI 9862)  eingesteckt. Das Versorgungskabel des Powerinjectors ist im Inneren des  Gehäuses mittels einer Klemme befestigt. Dieses Kabel und sein Netzteil  können leicht gelöst werden und durch etwaige andere 24V Versorgung (zum Beispiel direkt aus dem Steuerkasten der Maschine oder dem 24V Netzteil der SPU) ausgetauscht werden. Dazu muss nur das silberne Gehäuse  aufgeschraubt werden und das Kabel in der Klemme gelöst werden und durch eigene ausgetauscht werden. Die Polarität ist auf der Platine bei der  Klemme gekennzeichnet.
+Die zwei Sub-9-D-Stecker des Powerinjectors werden zwischen den korrespondierenden Stecker des STU Kabels und der SPU (NI 9862) eingesteckt. Das Versorgungskabel des Powerinjectors ist im Inneren des  Gehäuses mittels einer Klemme befestigt. Dieses Kabel und sein Netzteil können leicht gelöst werden und durch etwaige andere 24V Versorgung (zum Beispiel direkt aus dem Steuerkasten der Maschine oder dem 24V Netzteil der SPU) ausgetauscht werden. Dazu muss nur das silberne Gehäuse  aufgeschraubt werden und das Kabel in der Klemme gelöst werden und durch eigene ausgetauscht werden. Die Polarität ist auf der Platine bei der Klemme gekennzeichnet.
 
 ![pi_pcb](assets/pi_pcb.jpg)
 
