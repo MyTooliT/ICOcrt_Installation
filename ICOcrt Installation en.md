@@ -187,3 +187,28 @@ Now you should be able to find and connect with a sensory tool holder through th
 Now you can put the holder into the spindle. Move the spindle to  different positions inside the machining area to test if the connection  is given in the whole area. If not try positioning the STU to a  different place.
 
 Now the system is fully installed and usable.
+
+## Definition of the LEDs of ICOtronic System
+
+### STH:
+
+The STH has two green LEDs. The one on the “larger” PCB is the charging LED. It is shining when the holder is placed in the charging cradle. (Normally this LED is showing down in the CC and is hard to see.)
+
+The other LED is on the “smaller” PCB. This LED is shining or blinking when the holder is connected to a STU.
+
+### STU:
+
+The STU has four green and red LEDs in the corners. Additionally the STU has two power-LEDs and three CAN-LEDs. When the STU is being connected to power, all LED are shining for about 1 second and then show there normal behaviour.
+
+The CAN-LEDs are blinking and shining dependent on CAN-Messages sent or received. The two power LEDs show if the STU is connected to power.
+When the STU is connected to power and not connected to a STH, the green LEDs in the corners are blinking. The red ones are off. When a STH is connected to the STU the green LEDs stop blinking and start shining. The red ones still do not shine. When the STH is streaming data to the STU for processing, the red LED can start blinking in an irregular interval symbolizing that a data packet was lost.
+
+### CC:
+
+The CC has two different types of LEDs. The first one is the only LED with another colour than the other ones. This LED is shining when the CC is connected to a power supply and working.
+
+The rest of the LEDs has another colour than the first one. These LEDs symbolize the momentary used charging current. The more LED shine the more current is used to charge the STH. If a STH is placed into the CC and all of these LEDs are off, the STH is charged to the maximum.
+
+### SPU:
+
+The SPU has multiple LEDs. The LEDs on the top left of the SPU are status LEDs showing if the SPU is connected to power and so on. When a LAN-cable is connected and the other side of the LAN-cable is connected to a network or computer, the LEDs at the LAN-port start blinking. On the first module of the SPU, the CAN-module, there are two LEDs. These LED show if the CAN connection is working. After booting the SPU, it takes about 30 seconds for the LEDs to start shining. If not reboot the SPU or control the CAN connection. The second module, the digital module, has many LEDs. These LED show if there is a digital 1 sent to the SPU via the corresponding cable.

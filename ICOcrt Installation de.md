@@ -178,3 +178,29 @@ Abschließend sollte nun die Verbindung mit dem sensorischen Werkzeughalter gete
 Nun kann der Halter in die Spindel eingespannt werden. Danach mit der  Spindel in verschiedene Positionen im Bearbeitungsraum fahren und  überprüfen, ob der Halter an jeder Stelle eine Verbindung hat. Sollte  dies nicht der Fall sein, so kann die STU an eine andere Position  verschoben und erneut getestet werden.
 
 Nun sollte das System installiert sein und einsatzbereit sein
+
+## Bedeutungen der LEDs des ICOtronic System
+
+### STH:
+
+Die STH hat 2 grüne LEDs. Die eine auf dem "größeren" PCB ist die Ladungsanzeige. Diese LED leuchtet wenn der Halter in der Ladestation eingelegt ist. (Im Normallfall zeigt diese LED in der CC nach unten und ist daher schlecht zu sehen.)
+
+Die andere LED sitzt auf dem "kleineren" PCB. Diese LED leuchtet oder blinkt wenn der Halter mit der STU verbunden ist.
+
+### STU:
+
+Die STU hat 4 grüne und 4 rote LEDS in den Ecken. Zusätzlich besitzt die STU 2 Power-LEDS und 3 CAN-LEDs. Wenn die STU an Spannung angelegt wird leuchten alle LEDs für ca. 1 Sekunde und leuchten danach in ihren geplanten Funktionen.
+
+Die CAN-LEDs leuchten dementsprechend welche Nachrichten gesendet und empfangen werden. Die beiden Power-LEDs zeigen das die STU mit der Versorgung verbunden ist.
+
+Wenn die STU mit Spannung versorgt ist aber nicht mit einem Halter verbunden ist blinken die 4 grünen LEDs in den Ecken der STU. Die roten LEDs leuchten nicht. Wenn ein Halter mit der STU verbunden wird hören die grünen LEDs auf zu blinken und starten dauerhaft zu leuchten. Die roten LEDs leuchten weiterhin nicht. Wenn der Halter Streaming-Daten an die STU sendet kann es dazu kommen das die roten LEDs immer wieder kurz in unregelmäßigen Intervallen blinken. Dies symbolisiert das Datenpakete bei der Funkübertragung verloren gegangen sind.
+
+### CC:
+
+Die CC besitzt 2 verschieden farbige LED Typen. Die eine ist die einzige LED in einer anderen Farbe als alle anderen. Wenn diese LED leuchtet ist die CC an die Versorgung angeschlossen und funktioniert.
+
+Die restlichen LEDs haben alle eine andere Farbe als die erste. Diese LEDs symbolisieren den aktuell genutzten Ladestrom. Je mehr LEDs leuchten um so mehr Strom wird genutzt um den Halter zu laden. Wenn ein Halter in die CC eingelegt wird und alle LEDs, außer der ersten andersfarbigen LED, hören auf zu leuchten, ist der Halter auf seine maximale Spannung aufgeladen.
+
+### SPU:
+
+Die SPU hat mehrere LEDs. Die LEDs auf der oberen, linken Seite sind Status-LEDs welche die Versorgung und andere Parameter anzeigen. Wenn ein LAN-Kabel verbunden ist und das andere Ende des Kabels mit einem Netzwerk oder Computer verbunden ist, startet der LAN-Port zu blinken. Auf dem ersten Modul der SPU, dem CAN-Modul, befinden sich 2 LEDs. Diese signalisieren ob die CAN-Verbindung funktioniert oder nicht. Nach dem Starten der SPU braucht es etwa 30 Sekunden bis die LEDs anfangen grün zu leuchten. Wenn sie nicht leuchten oder rot leuchten muss die Verkabelung am CAN-Modul überprüft werde beziehungsweise die SPU neu gestartet werden. Das zweite Modul der SPU, das digitale Eingangs Modul, besitzt mehrere LEDs. Dieses LEDs symbolisieren ob an dem Jeweiligen PIN eine digitale 1 (LED leuchtet) oder eine 0 (LED leuchtet nicht) anliegt.
