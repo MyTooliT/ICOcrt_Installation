@@ -153,9 +153,11 @@ The calculated IFT-Value, which represents the stability of the process  regardi
 
 #### **Digital IN (NI 9421):**
 
-| PIN    | 0      | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    |
-| ------ | ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| signal | Enable | NC   | NC   | NC   | NC   | NC   | NC   | NC   | NC   | GND  |
+| PIN    | 0      | 1    | 2    | 3    | 4    | 5    | 6                      | 7                      | 8    | 9    |
+| ------ | ------ | ---- | ---- | ---- | ---- | ---- | ---------------------- | ---------------------- | ---- | ---- |
+| signal | Enable | NC   | NC   | NC   | NC   | NC   | NC / Tool Connection 1 | NC / Tool Connection 1 | NC   | GND  |
+
+In newer versions of the SPU it is possible to automatically connect too up to 3 pre defined toolholders with digital signals on the PIN 6 & 7 of the digital module.
 
 ![Verkabelung_en](assets/Verkabelung_en.jpg)
 

@@ -148,9 +148,11 @@ Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems  liefert
 
 #### **Digitaler Eingang (NI 9421):**
 
-| PIN    | 0        | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    |
-| ------ | -------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Signal | Eingriff | NB   | NB   | NB   | NB   | NB   | NB   | NB   | NB   | GND  |
+| PIN    | 0        | 1    | 2    | 3    | 4    | 5    | 6                 | 7                 | 8    | 9    |
+| ------ | -------- | ---- | ---- | ---- | ---- | ---- | ----------------- | ----------------- | ---- | ---- |
+| Signal | Eingriff | NB   | NB   | NB   | NB   | NB   | NB / Halterwahl 1 | NB / Halterwahl 2 | NB   | GND  |
+
+In neueren Versionen der SPU können bis zu 3, zuvor im Dashboard definierte Halter, automatisch mittels digitalem Signal verbunden werden. Diese sind dann mittels den digitalen Eingängen 6 & 7 auszuwählen.
 
  ![Verkabelung_de](assets/Verkabelung_de.jpg)
 
