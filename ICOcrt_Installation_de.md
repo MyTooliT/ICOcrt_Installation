@@ -1,8 +1,9 @@
-# ICOcrt Installation de
+# (PART\*) [Deutsch] {-}
+# ICOcrt Installationsanleitung {-}
 
 Installationsanleitung
 
-## System Komponenten 					  			
+# System Komponenten 					  			
 
 Die nachfolgende Grafik verleiht einen Überblick über die Komponenten des ICOtronic System. Die Hauptbestandteile sind:
 
@@ -13,27 +14,27 @@ Die nachfolgende Grafik verleiht einen Überblick über die Komponenten des ICOt
 
 ![icocrtl](assets/icocrtl.png)
 
-## Vorbereitung 			  			
+# Vorbereitung 			  			
 
 Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 
-### ICOtronic System-Komponenten 		
+## ICOtronic System-Komponenten 		
 
-#### Für eine Vollinstallation werden folgende Systemkomponenten benötigt:
+### Für eine Vollinstallation werden folgende Systemkomponenten benötigt:
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
 - Stationary Tranciever Unit - STU (5m Länge)
 - Optional: Verlängerungskabel für STU (7m Länge)
 
-#### Benötigtes Verbrauchsmaterial 			  			
+### Benötigtes Verbrauchsmaterial 			  			
 
 - Kabel in verschiedenen Farben: Die Haustechnik hat hier vermutlich  Konventionen, denen wir uns gerne beugen. Der Querschnitt beträgt  üblicherweise 0,75 mm², welche nur Niederspannung führen. Daher kann  auch hier gerne auf interne Konventionen Rücksicht genommen werden. Die  Kabel müssen aus dem Schaltschrank bis zu dem Aufstellort der SPU  reichen (max 6 parallel).      
 - Aderendhülsenset
 - Kabelbinder
 - Isolier- und Klebeband, falls wir was „passend“ machen müssen    
 
-### Benötigtes Werkzeug 			  			
+## Benötigtes Werkzeug 			  			
 
 - Seitenschneider
 - Abisolierzange
@@ -44,16 +45,16 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 - Ethernetkabel, um die SPU mit dem Laptop zu verbinden
 - Laptop mit Windows (Windows 7 Servicepack 1; Windows 8.1 Update 1 ; Windows 10) Betriebssystem und Adminberechtigung
 
-###  Notwendige HR/Kompetenzen 		
+##  Notwendige HR/Kompetenzen 		
 
 - System-Ingenieur
 - Maschinen Wartungstechniker
 - EDV-Admin
 - Maschinenführer
 
-### Notwendige Vorbereitungsarbeiten an der Maschine 		
+## Notwendige Vorbereitungsarbeiten an der Maschine 		
 
-#### Muss 				  			
+### Muss 				  			
 
 - Steuerungseingriff in der Maschine integriert
 - 230V beim Schaltschrank für SPU
@@ -61,22 +62,22 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 - Schaltpläne der Maschine
 - Kabeldurchgang in Bearbeitungsraum verfügbar
 
-#### Optional 			  			
+### Optional 			  			
 
 - Vorschläge für SPU Position
 - EDV-Integration und Datenbankanbindung
 
-## Aufstellung und Verkabelung 		
+# Aufstellung und Verkabelung 		
 
-### Vorbesprechung 		
+## Vorbesprechung 		
 
 Vor der Installation soll im Gespräch mit dem Kunden abgeklärt  werden, ob alle notwendigen Vorbedingungen erfüllt sind. Dazu empfiehlt  es sich, die benötigten Komponenten aus dem Abschnitt “Vorbereitung”  nochmals gemeinsam durchzugehen.
 
-### Begutachten der Maschine 			  			
+## Begutachten der Maschine 			  			
 
 Zur Begutachtung muss die Maschine nicht aus dem Produktivbetrieb  genommen werden. Es ist sogar förderlich, wenn die Maschine gerade  typisch verwendet wird. Der Systemingenieur besichtigt mit dem  Maschinenführer die Maschine, um folgende Punkte abzuklären.
 
-### Beschaffenheit der Maschine und Integrationsmöglichkeiten für die SPU und STU 					  			
+## Beschaffenheit der Maschine und Integrationsmöglichkeiten für die SPU und STU 					  			
 
 Um das ICOtronic System in die Steuerung einer Maschine zu  integrieren, müssen für SPU und STU geeignete Aufstellplätze gefunden  werden. Die SPU wird typischerweise in oder rund um den Schaltschrank  der Maschine angebracht. Dabei ist zu beachten, dass die SPU mit 230VAC  versorgt werden muss. Weiters müssen für den Steuerungseingriff Kabel  aus dem Schaltschrank zu der SPU geführt werden. Abhängig vom Aufbau der Maschine und Art des Eingriffes werden dafür unterschiedlich viele  elektrische Verbindungen benötigt. Eine typische Ausführung könnte sein:
 
@@ -86,13 +87,13 @@ Die STU muss im Bearbeitungsraum der Maschine angebracht werden, um  eine stabil
 
 Die Kabeldurchführung in den Bearbeitungsraum der Maschine muss  vorhanden sein, da sonst die STU nicht platziert werden kann. Die  Position im Bearbeitungsraum kann leicht verändert werden, da die STU  nur magnetisch montiert wird.
 
-## Montage der Systemkomponenten 		
+# Montage der Systemkomponenten 		
 
-### Die Aufstell-Situation der Maschine 				  			
+## Die Aufstell-Situation der Maschine 				  			
 
 Die Maschine muss für eine Installation soweit zugänglich sein, dass  alle Kabel, SPU und STU montiert werden können. Es ist abzuklären, ob  das mit irgendwelchen Sicherheitseinrichtungen in Konflikt steht. Oft  werden auch Leitern oder ähnliches benötigt, können jedoch nicht ohne  weiteres aufgestellt werden.
 
-### Die Kabelführung 					  			
+## Die Kabelführung 					  			
 
 Wenn die Positionen von SPU und STU festgelegt wurden, müssen die  Kabel für die jeweiligen Verbindungen vorbereitet werden. Die STU kommt  mit einem 5m Anschlusskabel, welches nicht (leicht) vor Ort verlängert  werden kann. Es ist günstig mit der Platzierung der STU zu beginnen und  das Kabel zur SPU zu fädeln. Jedoch sollte eine Kabelschleife nahe der  STU, aber außerhalb des Bearbeitungsraumes verbleiben. So kann man die  Position der STU im Nachhinein leichter wieder verändern.
 
@@ -100,7 +101,7 @@ Die Kabel für die Anbindung der Steuerung an die SPU müssen vor Ort  konfektio
 
 ![kabelführung_de](assets/kabelführung_de.png)
 
-## Netzwerkkonfiguration 			  			
+# Netzwerkkonfiguration 			  			
 
 - Laptop mit Windows Betriebssystem und Admin-Berechtigung, sowie bereits installierter LabView Runtime
   Downloadlink → http://www.ni.com/download/labview-run-time-engine-2018/7383/en/
@@ -109,14 +110,14 @@ Die Kabel für die Anbindung der Steuerung an die SPU müssen vor Ort  konfektio
 - IP-Adresse beim User Endgerät auf XXX setzen.
 - Dashboard öffnen, um Verbindung zu überprüfen
 
-## Anbinden der Steuerung 		
+# Anbinden der Steuerung 		
 
-### Funktion der Schnittstelle 			  			
+## Funktion der Schnittstelle 			  			
 
 Die Maschinensteuerung schaltet die Regelung der Maschine durch einen digitalen Ausgang ein. Um sicherzustellen, dass alle Instanzen  funktionieren, sollte die Funktion des Ausganges vor dem finalen  Anbinden verifiziert werden.
 Der richtige Steckplatz des  Steuersignals im Schaltschrank muss vor der Installation dokumentiert  sein. Typischerweise wird ein Hutschienen-Modul, dessen Pin sowie dessen Repräsentanz in der Steuerung im Schaltplan genannt. Vorerst sind nur  das Modul und der Steckplatz von Interesse. Außerdem muss aus dem  Schaltplan die zugehörige Bezugsmasse für dieses Modul abgelesen werden.
 
-### Integration von STU und der Energieversorgung der SPU	 			
+## Integration von STU und der Energieversorgung der SPU	 			
 
 Nachdem die STU im Maschinenraum fixiert und das Kabel zur SPU  verlegt wurde, müssen diese Komponenten mittels des Sub-9-D-Steckers  miteinander verbunden werden. Die Spannungsversorgung der STU wird  mittels eines Powerinjectors realisiert.
 
@@ -134,11 +135,11 @@ Nachdem die STU mit der SPU verbunden und die Versorgung aktiviert  ist, sollte 
 
 ![crio](assets/crio_en.jpg)
 
-### Pinbelegung der SPU 					  			
+## Pinbelegung der SPU 					  			
 
 NB... Nicht benutzt. In dieser Anwendung gleichbedeutend damit, dass nichts angeschlossen ist.
 
-#### **Analoger Ausgang (NI 9263):**
+### **Analoger Ausgang (NI 9263):**
 
 | PIN    | 0        | 1       | 2                 | 3            | 4                 | 5            | 6    | 7    | 8    | 9    |
 | ------ | -------- | ------- | ----------------- | ------------ | ----------------- | ------------ | ---- | ---- | ---- | ---- |
@@ -146,7 +147,7 @@ NB... Nicht benutzt. In dieser Anwendung gleichbedeutend damit, dass nichts ange
 
 Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems  liefert, wird als analoges Signal mit 0-10V auf Pin 0 zur Verfügung  gestellt. Dies bietet nur die Möglichkeit, den IFT-Wert zu erfassen.  Deshalb müssen Pin 0 und 1 nicht mit dem analogen Anschluss der Maschine verbunden werden. Diese beiden Pins werden nicht für den Echtzeit  Prozesseingriff benötigt. Die Skalierung und der Offset des ausgegebenen IFT-Wertes kann im Dashboard angepasst werden (für mehr Informationen  zum Dashboard und dessen Einstellungen siehe die Dashboard  Benutzeranleitung). 
 
-#### **Digitaler Eingang (NI 9421):**
+### **Digitaler Eingang (NI 9421):**
 
 | PIN    | 0        | 1    | 2    | 3    | 4    | 5    | 6                 | 7                 | 8    | 9    |
 | ------ | -------- | ---- | ---- | ---- | ---- | ---- | ----------------- | ----------------- | ---- | ---- |
@@ -156,7 +157,7 @@ In neueren Versionen der SPU können bis zu 3, zuvor im Dashboard definierte Hal
 
  ![Verkabelung_de](assets/Verkabelung_de.jpg)
 
-### Digitale Steuersignale, SPU Eingang 				  			
+## Digitale Steuersignale, SPU Eingang 				  			
 
 In Absprache mit dem Maschinenbediener soll der zu verifizierende  Ausgang wechselweise ein- und ausgeschaltet werden. Dabei überprüft man  die Spannung zwischen dem Steckplatz und der Bezugsmasse. Das kann  entweder direkt am Schaltschrank oder an der von der SPU getrennten  Klemmleiste erfolgen. Sollte die Steuerspannung von den erwarteten  Spannungsniveaus (0V, 24V) signifikant abweichen, ist vermutlich etwas  mit der Bezugsmasse nicht in Ordnung. Wenn die Reaktion korrekt erfolgt, sollten die Kabelbezeichnungen, Klemmen-Nummern usw. in der  Installationsdokumentation vermerkt werden.
 
@@ -166,7 +167,7 @@ Es empfielt sich, die Funktion dieses Signals in Stufen zu prüfen:
 2. Durch Schreiben der Variable in der Steuerung.
 3. Durch manuelles Setzen der entsprechenden M-Befehle.
 
-### Analoge Steuersignale, SPU Ausgang 			  			
+## Analoge Steuersignale, SPU Ausgang 			  			
 
 Die analogen Steuersignale zum Einstellen des Maschineneingriffs werden von der SPU generiert. Die Spannungswerte reichen von 0-10V und entsprechen einer Reduktion des Overrides von 0-100%. Also je höher die Spannung,  desto stärker die Reduktion von Vorschub bzw. Spindel. Der Wert in der  Steuerung entspricht hierbei einer Multiplikation von Potenziometer und  SPU Ausgabe.
 Es empfielt sich wieder stufenweise vorzugehen:
@@ -181,15 +182,15 @@ Nun kann der Halter in die Spindel eingespannt werden. Danach mit der  Spindel i
 
 Nun sollte das System installiert sein und einsatzbereit sein
 
-## Bedeutungen der LEDs des ICOtronic System
+# Bedeutungen der LEDs des ICOtronic System
 
-### STH:
+## STH:
 
 Die STH hat 2 grüne LEDs. Die eine auf dem "größeren" PCB ist die Ladungsanzeige. Diese LED leuchtet wenn der Halter in der Ladestation eingelegt ist. (Im Normallfall zeigt diese LED in der CC nach unten und ist daher schlecht zu sehen.)
 
 Die andere LED sitzt auf dem "kleineren" PCB. Diese LED leuchtet oder blinkt wenn der Halter mit der STU verbunden ist.
 
-### STU:
+## STU:
 
 Die STU hat 4 grüne und 4 rote LEDS in den Ecken. Zusätzlich besitzt die STU 2 Power-LEDS und 3 CAN-LEDs. Wenn die STU an Spannung angelegt wird leuchten alle LEDs für ca. 1 Sekunde und leuchten danach in ihren geplanten Funktionen.
 
@@ -197,12 +198,12 @@ Die CAN-LEDs leuchten dementsprechend welche Nachrichten gesendet und empfangen 
 
 Wenn die STU mit Spannung versorgt ist aber nicht mit einem Halter verbunden ist blinken die 4 grünen LEDs in den Ecken der STU. Die roten LEDs leuchten nicht. Wenn ein Halter mit der STU verbunden wird hören die grünen LEDs auf zu blinken und starten dauerhaft zu leuchten. Die roten LEDs leuchten weiterhin nicht. Wenn der Halter Streaming-Daten an die STU sendet kann es dazu kommen das die roten LEDs immer wieder kurz in unregelmäßigen Intervallen blinken. Dies symbolisiert das Datenpakete bei der Funkübertragung verloren gegangen sind.
 
-### CC:
+## CC:
 
 Die CC besitzt 2 verschieden farbige LED Typen. Die eine ist die einzige LED in einer anderen Farbe als alle anderen. Wenn diese LED leuchtet ist die CC an die Versorgung angeschlossen und funktioniert.
 
 Die restlichen LEDs haben alle eine andere Farbe als die erste. Diese LEDs symbolisieren den aktuell genutzten Ladestrom. Je mehr LEDs leuchten um so mehr Strom wird genutzt um den Halter zu laden. Wenn ein Halter in die CC eingelegt wird und alle LEDs, außer der ersten andersfarbigen LED, hören auf zu leuchten, ist der Halter auf seine maximale Spannung aufgeladen.
 
-### SPU:
+## SPU:
 
 Die SPU hat mehrere LEDs. Die LEDs auf der oberen, linken Seite sind Status-LEDs welche die Versorgung und andere Parameter anzeigen. Wenn ein LAN-Kabel verbunden ist und das andere Ende des Kabels mit einem Netzwerk oder Computer verbunden ist, startet der LAN-Port zu blinken. Auf dem ersten Modul der SPU, dem CAN-Modul, befinden sich 2 LEDs. Diese signalisieren ob die CAN-Verbindung funktioniert oder nicht. Nach dem Starten der SPU braucht es etwa 30 Sekunden bis die LEDs anfangen grün zu leuchten. Wenn sie nicht leuchten oder rot leuchten muss die Verkabelung am CAN-Modul überprüft werde beziehungsweise die SPU neu gestartet werden. Das zweite Modul der SPU, das digitale Eingangs Modul, besitzt mehrere LEDs. Dieses LEDs symbolisieren ob an dem Jeweiligen PIN eine digitale 1 (LED leuchtet) oder eine 0 (LED leuchtet nicht) anliegt.

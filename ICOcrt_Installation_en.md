@@ -1,8 +1,9 @@
-# Installation en
+# (PART\*) [English] {-}
+# ICOcrt Installation Manual {-}
 
 Installation manual for ICOtronic control
 
-## System Components 						  			
+# System Components 						  			
 
 The main components for the ICOtronic control system are shown in the figure below. Those are:
 
@@ -13,19 +14,19 @@ The main components for the ICOtronic control system are shown in the figure bel
 
 ![icocrtl](assets/icocrtl.png)
 
-## Preparations 		
+# Preparations 		
 
 This document describes the installation of the ICOtronic Control System.
 
-### ICOtronic System components 				  			
+## ICOtronic System components 				  			
 
-#### For a full installation the following system components are required:
+### For a full installation the following system components are required:
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
 - Stationary Transceiver Unit - STU (~5m cable length - depending on the machine tool)
 
-### Required materials and tools 		
+## Required materials and tools 		
 
 - Typical core stranded cables: with different colours. Your  maintenance technicians probably have their own conventions. We will  gladly use them.
   Diameter is typically 0,75 mm², which are normal for low voltage. Here we also gladly use the conventions of your  maintenance technicians.
@@ -34,7 +35,7 @@ This document describes the installation of the ICOtronic Control System.
 - Cable ties for cable management
 - Electrical- and duct tape if something has to be "fixed" 
 
-### Needed tools 				  			
+## Needed tools 				  			
 
 - Cable cutter
 - Cable stripper
@@ -45,16 +46,16 @@ This document describes the installation of the ICOtronic Control System.
 - Ethernet cable to connect the SPU and the Laptop
 - Laptop with Windows (Windows 7 Servicepack 1; Windows 8.1 Update 1 ; Windows 10) operating system and admin rights
 
-### Needed HR/competences 				  			
+## Needed HR/competences 				  			
 
 - System engineer
 - Machine/electrical maintenance technician
 - Computer/IT administrator
 - Machine operator
 
-### Needed preparatory work at the machine 		
+## Needed preparatory work at the machine 		
 
-#### Must-Have 		  			
+### Must-Have 		  			
 
 - Control system interface (analogue input module) already integrated
 - 230V AC or 24V DC of power supply at the electrical cabinet for the SPU
@@ -62,22 +63,22 @@ This document describes the installation of the ICOtronic Control System.
 - Wiring diagram of the machine
 - Existing cable bushing into the machining area
 
-#### Optional 				  			
+### Optional 				  			
 
 - Proposals for SPU positioning
 - Computer integration and database connection
 
-## Setup and cable installation 		
+# Setup and cable installation 		
 
-### Preliminary talk 			  			
+## Preliminary talk 			  			
 
 Through a talk with the customer before the installation, it should  be clarified if all preconditions for the installation have been met.  Therefore, it is recommended to go through the components of the  "Preparations" part again with the customer.
 
-### Inspection of the machine 				  			
+## Inspection of the machine 				  			
 
 The machine does not need to be taken out of the production operation for the inspection. It is even better if the machine is under  production during inspection. Both the system-engineer and the machine  operator inspect the machine to clarify the following points.
 
-### Condition of the machine and integration possibilities for SPU and STU 						  			
+## Condition of the machine and integration possibilities for SPU and STU 						  			
 
 Appropriate locations for the integration of the SPU and STU have to  be found in order to hook up the ICOtronic System to the control system  of the machine. The SPU is typically installed in or around the  electrical cabinet of the machine. Remember that the SPU has to be  powered by 230VAC (50Hz). Moreover, the cables for the controller  signals have to be installed from the electrical cabinet to the SPU.  Depending on the type of machine tool and the way of parameter  adaptation, different numbers of cables will be needed. A typical  installation follows:
 
@@ -92,13 +93,13 @@ The STU has to be positioned in the machining area to guarantee a  stable radio 
 
 A cable bushing into the machining area has to be provided for the  STU to be installed. The position in the machining area can easily be  changed because of the magnetically tape, which is used to install the  STU.
 
-## Installation of the system components 		
+# Installation of the system components 		
 
-### The setup situation of the machine 					  			
+## The setup situation of the machine 					  			
 
 To install the system into the machine, the machine must be  accessible in a way that the SPU, STU and all cables can be installed.  It has to be clarified if this causes problems with existing safety  installations. Often ladders and similar equipment will be needed but  cannot be placed anywhere without problems.
 
-### The cable routing 				  			
+## The cable routing 				  			
 
 After finding the positions to install the SPU and STU, the cables  for their connection have to be prepared. The STU is equipped with a 5m  long connection cable, which is not (easily) extendable at the  installation. It is advisable to install the STU first and then route  the cable to the SPU. It is advantageous to place any leftover cable  loops near the STU, but out of the machining area. This helps to easily  reposition the STU if ever needed.
 
@@ -106,7 +107,7 @@ The cables to connect the SPU with the interface module of the  control system h
 
 ![kabelführung_en](assets/kabelführung_en.png)
 
-## Network configuration 				  			
+# Network configuration 				  			
 
 - Laptop with Windows operating system and admin rights, with already installed LabView Runtime
 - download link -> http://www.ni.com/download/labview-run-time-engine-2018/7383/en/
@@ -115,13 +116,13 @@ The cables to connect the SPU with the interface module of the  control system h
 - IP address of the user end device set. (For details, see the Dashboard instructions)
 - Open Dashboard to test the connection
 
-## Integration of the system 		
+# Integration of the system 		
 
-### Function of the interface 				  			
+## Function of the interface 				  			
 
 The machine control starts the closed loop ICOtronic control of the  machine through a digital output. To guarantee that all instances are  working as intended, it is necessary to test the function of the SPU  output before the final connection of the SPU to the interface module.  The right slot of the control signal in the electrical cabinet has to be documented before the installation. Typically, a hat rail module, its  PIN-number and its representation in the control will be named.  Initially, only the module and the slot are of interest. Additionally  the corresponding ground for the module has to be found out.
 
-### Integration of STU and power supply of SPU 					  			
+## Integration of STU and power supply of SPU 					  			
 
 After the STU is properly positioned and the cable routed, the STU  will be connected to the SPU with the Sub-9-D-plug. The power supply for the STU is realized with a Power Injector.
 
@@ -139,11 +140,11 @@ After the SPU is powered and the STU is connected, wait for about  15-30 seconds
 
 ![crio_en](assets/crio_en.jpg)
 
-### Pin mapping of the SPU 						  			
+## Pin mapping of the SPU 						  			
 
 NC... Not Connected, which usually means not used in this application.
 
-#### **Analogue OUT (NI 9263):**
+### **Analogue OUT (NI 9263):**
 
 | PIN    | 0         | 1       | 2             | 3        | 4                | 5           | 6    | 7    | 8    | 9    |
 | ------ | --------- | ------- | ------------- | -------- | ---------------- | ----------- | ---- | ---- | ---- | ---- |
@@ -151,7 +152,7 @@ NC... Not Connected, which usually means not used in this application.
 
 The calculated IFT-Value, which represents the stability of the process  regarding chatter, is provided as an analogue signal from 0 - 10 V on  Pin number 0. However, this is just for the possibility of recording the IFT-Value and therefore, Pin 0 and Pin 1 are not connected with the  required analogue interface for the in-process parameter adaption of the control system. The IFT-Value can be scaled and its offset can be  changed in the Dashboard. (For more information about the Dashboard and  its configuration, see the Dashboard user manual)
 
-#### **Digital IN (NI 9421):**
+### **Digital IN (NI 9421):**
 
 | PIN    | 0      | 1    | 2    | 3    | 4    | 5    | 6                      | 7                      | 8    | 9    |
 | ------ | ------ | ---- | ---- | ---- | ---- | ---- | ---------------------- | ---------------------- | ---- | ---- |
@@ -161,7 +162,7 @@ In newer versions of the SPU it is possible to automatically connect too up to 3
 
 ![Verkabelung_en](assets/Verkabelung_en.jpg)
 
-### Digital control signal, SPU input 							  			
+## Digital control signal, SPU input 							  			
 
 In cooperation with the machine operator, the digital output of the  machine should be switched on and off. Meanwhile the voltage between the PIN and the corresponding ground is measured. This can be measured  either directly in the electrical cabinet or on the corresponding slots  on the SPU. If the control signal voltage is significantly different to  the expected voltages (0V, 24V) then there is probably something wrong  with the corresponding ground. If the reaction of the PIN is correct,  the cable designation, terminal number etc. should be recorded into the  installation document.
 
@@ -171,7 +172,7 @@ It is advisable to test the function of the signal in a few steps:
 2. Through setting in the control.
 3. Through manually setting the corresponding M-commands.
 
-### Analogue control signal, SPU output 			
+## Analogue control signal, SPU output 			
 
 The external analogue signals to control the machine tool overrides  are created by the SPU. The voltage range is 0-10V and corresponds to an override of 0-100%. The larger the voltage of the signal the larger the reduction of feed and/or spindle speed. The resulting feed and spindle  speed is generated by the multiplication of the SPU output and the value set at the machine via the potentiometer.
 
@@ -190,27 +191,27 @@ Now you can put the holder into the spindle. Move the spindle to  different posi
 
 Now the system is fully installed and usable.
 
-## Definition of the LEDs of ICOtronic System
+# Definition of the LEDs of ICOtronic System
 
-### STH:
+## STH:
 
 The STH has two green LEDs. The one on the “larger” PCB is the charging LED. It is shining when the holder is placed in the charging cradle. (Normally this LED is showing down in the CC and is hard to see.)
 
 The other LED is on the “smaller” PCB. This LED is shining or blinking when the holder is connected to a STU.
 
-### STU:
+## STU:
 
 The STU has four green and red LEDs in the corners. Additionally the STU has two power-LEDs and three CAN-LEDs. When the STU is being connected to power, all LED are shining for about 1 second and then show there normal behaviour.
 
 The CAN-LEDs are blinking and shining dependent on CAN-Messages sent or received. The two power LEDs show if the STU is connected to power.
 When the STU is connected to power and not connected to a STH, the green LEDs in the corners are blinking. The red ones are off. When a STH is connected to the STU the green LEDs stop blinking and start shining. The red ones still do not shine. When the STH is streaming data to the STU for processing, the red LED can start blinking in an irregular interval symbolizing that a data packet was lost.
 
-### CC:
+## CC:
 
 The CC has two different types of LEDs. The first one is the only LED with another colour than the other ones. This LED is shining when the CC is connected to a power supply and working.
 
 The rest of the LEDs has another colour than the first one. These LEDs symbolize the momentary used charging current. The more LED shine the more current is used to charge the STH. If a STH is placed into the CC and all of these LEDs are off, the STH is charged to the maximum.
 
-### SPU:
+## SPU:
 
 The SPU has multiple LEDs. The LEDs on the top left of the SPU are status LEDs showing if the SPU is connected to power and so on. When a LAN-cable is connected and the other side of the LAN-cable is connected to a network or computer, the LEDs at the LAN-port start blinking. On the first module of the SPU, the CAN-module, there are two LEDs. These LED show if the CAN connection is working. After booting the SPU, it takes about 30 seconds for the LEDs to start shining. If not reboot the SPU or control the CAN connection. The second module, the digital module, has many LEDs. These LED show if there is a digital 1 sent to the SPU via the corresponding cable.
