@@ -20,14 +20,14 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 
 ## ICOtronic System-Komponenten 		
 
-### Für eine Vollinstallation werden folgende Systemkomponenten benötigt:
+#### Für eine Vollinstallation werden folgende Systemkomponenten benötigt: {-}
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
 - Stationary Tranciever Unit - STU (5m Länge)
 - Optional: Verlängerungskabel für STU (7m Länge)
 
-### Benötigtes Verbrauchsmaterial 			  			
+## Benötigtes Verbrauchsmaterial 			  			
 
 - Kabel in verschiedenen Farben: Die Haustechnik hat hier vermutlich  Konventionen, denen wir uns gerne beugen. Der Querschnitt beträgt  üblicherweise 0,75 mm², welche nur Niederspannung führen. Daher kann  auch hier gerne auf interne Konventionen Rücksicht genommen werden. Die  Kabel müssen aus dem Schaltschrank bis zu dem Aufstellort der SPU  reichen (max 6 parallel).      
 - Aderendhülsenset
@@ -54,7 +54,7 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 
 ## Notwendige Vorbereitungsarbeiten an der Maschine 		
 
-### Muss 				  			
+#### Muss {-}				  			
 
 - Steuerungseingriff in der Maschine integriert
 - 230V beim Schaltschrank für SPU
@@ -62,7 +62,7 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 - Schaltpläne der Maschine
 - Kabeldurchgang in Bearbeitungsraum verfügbar
 
-### Optional 			  			
+#### Optional {-}			  			
 
 - Vorschläge für SPU Position
 - EDV-Integration und Datenbankanbindung
@@ -139,7 +139,7 @@ Nachdem die STU mit der SPU verbunden und die Versorgung aktiviert  ist, sollte 
 
 NB... Nicht benutzt. In dieser Anwendung gleichbedeutend damit, dass nichts angeschlossen ist.
 
-### **Analoger Ausgang (NI 9263):**
+#### Analoger Ausgang (NI 9263): {-}
 
 | PIN    | 0        | 1       | 2                 | 3            | 4                 | 5            | 6    | 7    | 8    | 9    |
 | ------ | -------- | ------- | ----------------- | ------------ | ----------------- | ------------ | ---- | ---- | ---- | ---- |
@@ -147,7 +147,7 @@ NB... Nicht benutzt. In dieser Anwendung gleichbedeutend damit, dass nichts ange
 
 Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems  liefert, wird als analoges Signal mit 0-10V auf Pin 0 zur Verfügung  gestellt. Dies bietet nur die Möglichkeit, den IFT-Wert zu erfassen.  Deshalb müssen Pin 0 und 1 nicht mit dem analogen Anschluss der Maschine verbunden werden. Diese beiden Pins werden nicht für den Echtzeit  Prozesseingriff benötigt. Die Skalierung und der Offset des ausgegebenen IFT-Wertes kann im Dashboard angepasst werden (für mehr Informationen  zum Dashboard und dessen Einstellungen siehe die Dashboard  Benutzeranleitung). 
 
-### **Digitaler Eingang (NI 9421):**
+#### Digitaler Eingang (NI 9421): {-}
 
 | PIN    | 0        | 1    | 2    | 3    | 4    | 5    | 6                 | 7                 | 8    | 9    |
 | ------ | -------- | ---- | ---- | ---- | ---- | ---- | ----------------- | ----------------- | ---- | ---- |
