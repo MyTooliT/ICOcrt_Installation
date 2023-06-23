@@ -1,13 +1,10 @@
 system-components
 preparations
 icotronic-system-components
-for-a-full-installation-the-following-system-components-are-required
 required-materials-and-tools
 needed-tools
 needed-hrcompetences
 needed-preparatory-work-at-the-machine
-must-have
-optional
 setup-and-cable-installation
 preliminary-talk
 inspection-of-the-machine
@@ -20,8 +17,6 @@ integration-of-the-system
 function-of-the-interface
 integration-of-stu-and-power-supply-of-spu
 pin-mapping-of-the-spu
-analogue-out-ni-9263
-digital-in-ni-9421
 digital-control-signal-spu-input
 analogue-control-signal-spu-output
 definition-of-the-leds-of-icotronic-system
