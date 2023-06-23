@@ -20,7 +20,7 @@ This document describes the installation of the ICOtronic Control System.
 
 ## ICOtronic System components 				  			
 
-### For a full installation the following system components are required:
+#### For a full installation the following system components are required: {-}
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
@@ -55,7 +55,7 @@ This document describes the installation of the ICOtronic Control System.
 
 ## Needed preparatory work at the machine 		
 
-### Must-Have 		  			
+#### Must-Have {-} 		  			
 
 - Control system interface (analogue input module) already integrated
 - 230V AC or 24V DC of power supply at the electrical cabinet for the SPU
@@ -63,7 +63,7 @@ This document describes the installation of the ICOtronic Control System.
 - Wiring diagram of the machine
 - Existing cable bushing into the machining area
 
-### Optional 				  			
+#### Optional {-} 				  			
 
 - Proposals for SPU positioning
 - Computer integration and database connection
@@ -144,7 +144,7 @@ After the SPU is powered and the STU is connected, wait for about  15-30 seconds
 
 NC... Not Connected, which usually means not used in this application.
 
-### **Analogue OUT (NI 9263):**
+#### **Analogue OUT (NI 9263):** {-}
 
 | PIN    | 0         | 1       | 2             | 3        | 4                | 5           | 6    | 7    | 8    | 9    |
 | ------ | --------- | ------- | ------------- | -------- | ---------------- | ----------- | ---- | ---- | ---- | ---- |
@@ -152,7 +152,7 @@ NC... Not Connected, which usually means not used in this application.
 
 The calculated IFT-Value, which represents the stability of the process  regarding chatter, is provided as an analogue signal from 0 - 10 V on  Pin number 0. However, this is just for the possibility of recording the IFT-Value and therefore, Pin 0 and Pin 1 are not connected with the  required analogue interface for the in-process parameter adaption of the control system. The IFT-Value can be scaled and its offset can be  changed in the Dashboard. (For more information about the Dashboard and  its configuration, see the Dashboard user manual)
 
-### **Digital IN (NI 9421):**
+#### **Digital IN (NI 9421):** {-}
 
 | PIN    | 0      | 1    | 2    | 3    | 4    | 5    | 6                      | 7                      | 8    | 9    |
 | ------ | ------ | ---- | ---- | ---- | ---- | ---- | ---------------------- | ---------------------- | ---- | ---- |
