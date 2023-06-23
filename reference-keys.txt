@@ -1,4 +1,3 @@
-installation-en
 system-components
 preparations
 icotronic-system-components
@@ -30,7 +29,6 @@ sth
 stu
 cc
 spu
-icocrt-installation-de
 system-komponenten
 vorbereitung
 icotronic-system-komponenten
