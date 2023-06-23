@@ -4,7 +4,7 @@ bookdown::gitbook:
   split_by: none
   config:
       sharing: null
-      toc_depth: 3
+      toc_depth: 2
       toc:
         collapse: none
         scroll_highlight: true
