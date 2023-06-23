@@ -27,13 +27,10 @@ spu
 system-komponenten
 vorbereitung
 icotronic-system-komponenten
-für-eine-vollinstallation-werden-folgende-systemkomponenten-benötigt
 benötigtes-verbrauchsmaterial
 benötigtes-werkzeug
 notwendige-hrkompetenzen
 notwendige-vorbereitungsarbeiten-an-der-maschine
-muss
-optional-1
 aufstellung-und-verkabelung
 vorbesprechung
 begutachten-der-maschine
@@ -46,8 +43,6 @@ anbinden-der-steuerung
 funktion-der-schnittstelle
 integration-von-stu-und-der-energieversorgung-der-spu
 pinbelegung-der-spu
-analoger-ausgang-ni-9263
-digitaler-eingang-ni-9421
 digitale-steuersignale-spu-eingang
 analoge-steuersignale-spu-ausgang
 bedeutungen-der-leds-des-icotronic-system
