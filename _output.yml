@@ -1,0 +1,11 @@
+bookdown::gitbook:
+  css: "custom.css"
+  fig_caption: false
+  split_by: none
+  config:
+      sharing: null
+      toc_depth: 4
+      toc:
+        collapse: none
+        scroll_highlight: true
+bookdown::epub_book: default

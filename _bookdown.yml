@@ -1,0 +1,7 @@
+book_filename:
+  ICOcrt_Installation_Documentation
+delete_merged_file: true
+output_dir: Bookdown
+rmd_files:
+  - ICOcrt_Installation_en.md
+  - ICOcrt_Installation_de.md
