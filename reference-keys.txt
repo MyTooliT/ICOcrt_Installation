@@ -1,3 +1,4 @@
+version
 system-components
 preparations
 icotronic-system-components
@@ -17,13 +18,14 @@ integration-of-the-system
 function-of-the-interface
 integration-of-stu-and-power-supply-of-spu
 pin-mapping-of-the-spu
-digital-control-signal-spu-input
+digital-control-signal-spu-input-output
 analogue-control-signal-spu-output
 definition-of-the-leds-of-icotronic-system
 sth
 stu
 cc
 spu
+version-1
 system-komponenten
 vorbereitung
 icotronic-system-komponenten
@@ -43,7 +45,7 @@ anbinden-der-steuerung
 funktion-der-schnittstelle
 integration-von-stu-und-der-energieversorgung-der-spu
 pinbelegung-der-spu
-digitale-steuersignale-spu-eingang
+digitale-steuersignale-spu-eingang-ausgang
 analoge-steuersignale-spu-ausgang
 bedeutungen-der-leds-des-icotronic-system
 sth-1
