@@ -1,7 +1,13 @@
 # (PART\*) [Deutsch] {-}
 # ICOcrt Installationsanleitung {-}
 
-Installationsanleitung
+Installationsanleitung für das ICOtronic Control System
+
+# Version
+
+Diese Anleitung wurde geschrieben für eine SPU mit Dashboardversion v4.0.1.4. Für eine Installationsanleitung von älteren Versionen siehe nachstehenden Link:
+
+[ältere Version](https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20de.md)
 
 # System Komponenten 					  			
 
@@ -85,6 +91,11 @@ Zwei Adern mit etwa 0,75mm2 für das digitale  Eingriffssignal, ausgelöst durch
 
 Die STU muss im Bearbeitungsraum der Maschine angebracht werden, um  eine stabile Funkverbindung mit dem STH zu gewährleisten. Einen  günstigen Platz für die STU auszusuchen erfordert oft etwas probieren.  Daher ist die STU nur magnetisch befestigt und kann schnell manipuliert  werden. Generell wäre ein Montageort nahe der Spindel günstig, jedoch  kommt es dort auch oft zu vermehrtem Span-und Kühlmittel-Aufkommen.  Dieses kann kurzfristig zu instabilen Funkverbindungen, sowie  längerfristig zu Beschädigungen der STU führen. Montage auf beweglichen  Teilen kann zu Problemen mit dem Anschlusskabel führen. Montagen im  oberen Bereich des Maschinenraums sind oft ein guter Kompromiss. Das  Frontglas sollte bevorzugt durch das Maschinenfenster einsehbar sein, da die LEDs als Status-Indikator verwendet werden.
 
+| LED - STATUS                    | BEDEUTUNG                                  |
+|---------------------------------|--------------------------------------------|
+|Grüne LEDs in den Ecken blinken  |STU ist aktiv und kein Halter ist verbunden |
+|Grüne LEDs in den Ecken leuchten |STU ist mit Halter verbunden                |
+
 Die Kabeldurchführung in den Bearbeitungsraum der Maschine muss  vorhanden sein, da sonst die STU nicht platziert werden kann. Die  Position im Bearbeitungsraum kann leicht verändert werden, da die STU  nur magnetisch montiert wird.
 
 # Montage der Systemkomponenten 		
@@ -107,7 +118,7 @@ Die Kabel für die Anbindung der Steuerung an die SPU müssen vor Ort  konfektio
   Downloadlink → http://www.ni.com/download/labview-run-time-engine-2018/7383/en/
   ACHTUNG: Es muss unbedingt die Runtime 2019 SP1 installiert werden
 - Ethernetkabel, um die SPU Box mit dem Laptop zu verbinden
-- IP-Adresse beim User Endgerät auf XXX setzen.
+- IP-Adresse beim User Endgerät gesetzt. (Für Details siehe die [Dashboard Anleitung](https://mytoolit.github.io/Dashboard/#software--und-netzwerkeinstellungen-des-computers))
 - Dashboard öffnen, um Verbindung zu überprüfen
 
 # Anbinden der Steuerung 		
@@ -133,7 +144,7 @@ Des Weiteren gehört der 24V Stecker der SPU nun mit dem 24V Netzteil  verbunden
 
 Nachdem die STU mit der SPU verbunden und die Versorgung aktiviert  ist, sollte nach etwa 15-30 Sekunden Wartezeit die LED1 grün leuchten  (LED1 befindet sich auf dem Modul auf dem die STU angeschlossen wird).  Sollte die LED nicht leuchten, starten Sie die SPU neu mittels erneutem  Trennen und Verbinden der Versorgung und versuchen Sie es erneut.
 
-![crio](assets/crio_en.jpg)
+![crio](assets/)
 
 ## Pinbelegung der SPU 					  			
 
@@ -147,18 +158,34 @@ NB... Nicht benutzt. In dieser Anwendung gleichbedeutend damit, dass nichts ange
 
 Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems  liefert, wird als analoges Signal mit 0-10V auf Pin 0 zur Verfügung  gestellt. Dies bietet nur die Möglichkeit, den IFT-Wert zu erfassen.  Deshalb müssen Pin 0 und 1 nicht mit dem analogen Anschluss der Maschine verbunden werden. Diese beiden Pins werden nicht für den Echtzeit  Prozesseingriff benötigt. Die Skalierung und der Offset des ausgegebenen IFT-Wertes kann im Dashboard angepasst werden (für mehr Informationen  zum Dashboard und dessen Einstellungen siehe die Dashboard  Benutzeranleitung). 
 
-#### Digitaler Eingang (NI 9421): {-}
+#### Digitaler Eingang & Ausgang (NI 9375): {-}
 
-| PIN    | 0        | 1    | 2    | 3    | 4    | 5    | 6                 | 7                 | 8    | 9    |
-| ------ | -------- | ---- | ---- | ---- | ---- | ---- | ----------------- | ----------------- | ---- | ---- |
-| Signal | Eingriff | NB   | NB   | NB   | NB   | NB   | NB / Halterwahl 1 | NB / Halterwahl 2 | NB   | GND  |
+| PIN | SIGNAL           | PIN   | SIGNAL         |
+|-----|------------------|-------|----------------|
+| 1   | DI/ACTIVATE RULE | 19    | DI/CONNECT-ID1 |
+| 2   | DI/RECORD        | 20    | DI/CONNECT-ID2 |
+| 3   | NB               | 21    | NB             |
+| 4   | NB               | 22    | NB             |
+| 5   | NB               | 23    | NB             |
+| 6   | NB               | 24    | NB             |
+| 7   | NB               | 25    | NB             |
+| 8   | NB               | 26    | NB             |
+| 9   | GND              | 27    | NB             |
+| 10  | DO/SYSTEM ACTIV  | 28    | NB             |
+| 11  | DO/CONNECTED     | 29    | NB             |
+| 12  | DO/RECORDING     | 30    | NB             |
+| 13  | DO/RULE ENABLED  | 31    | NB             |
+| 14  | DO/INTERFERENCE  | 32    | NB             |
+| 15  | NB               | 33    | NB             |
+| 16  | NB               | 34    | NB             |
+| 17  | NB               | 35    | NB             |
+| 18  | GND              | 36    | +24V           |
 
-In neueren Versionen der SPU können bis zu 3, zuvor im Dashboard definierte Halter, automatisch mittels digitalem Signal verbunden werden. Diese sind dann mittels den digitalen Eingängen 6 & 7 auszuwählen.
+Die SPU kann mittels der digitalen Eingänge auf Pin 19&20 bis zu 3 zuvor im Dashboard definierte Halter automatisch verbinden. (ID3 = ID1 + ID2)
 
- ![Verkabelung_de](assets/Verkabelung_de.jpg)
+ ![Verkabelung_de](assets/NI-9375-Verkabelung.png)
 
-## Digitale Steuersignale, SPU Eingang 				  			
-
+## Digitale Steuersignale, SPU Eingang & Ausgang				  			
 In Absprache mit dem Maschinenbediener soll der zu verifizierende  Ausgang wechselweise ein- und ausgeschaltet werden. Dabei überprüft man  die Spannung zwischen dem Steckplatz und der Bezugsmasse. Das kann  entweder direkt am Schaltschrank oder an der von der SPU getrennten  Klemmleiste erfolgen. Sollte die Steuerspannung von den erwarteten  Spannungsniveaus (0V, 24V) signifikant abweichen, ist vermutlich etwas  mit der Bezugsmasse nicht in Ordnung. Wenn die Reaktion korrekt erfolgt, sollten die Kabelbezeichnungen, Klemmen-Nummern usw. in der  Installationsdokumentation vermerkt werden.
 
 Es empfielt sich, die Funktion dieses Signals in Stufen zu prüfen:

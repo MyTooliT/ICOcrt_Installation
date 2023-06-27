@@ -1,7 +1,13 @@
 # (PART\*) [English] {-}
 # ICOcrt Installation Manual {-}
 
-Installation manual for ICOtronic control
+Installation manual for ICOtronic control system
+
+# Version
+
+This manual was written for SPUs with a Dashboard version v4.0.1.4. If you need an installation manual for an older version see the following link:
+
+[older version](https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20en.md)
 
 # System Components 						  			
 
@@ -113,7 +119,7 @@ The cables to connect the SPU with the interface module of the  control system h
 - download link -> http://www.ni.com/download/labview-run-time-engine-2018/7383/en/
   CAUTION: it has to be the 2019 SP1 version
 - Ethernet cable to connect the SPU with the Laptop
-- IP address of the user end device set. (For details, see the Dashboard instructions)
+- IP address of the user end device set. (For details, see the [Dashboard instructions](https://mytoolit.github.io/Dashboard/#software-and-network-settings-for-your-pc))
 - Open Dashboard to test the connection
 
 # Integration of the system 		
@@ -138,7 +144,7 @@ Additionally connect cables from the Power supply unit to the 24V plug of the SP
 
 After the SPU is powered and the STU is connected, wait for about  15-30 seconds. The LED1, on the module where the STU is connected,  should start shining green. If not try to reset the power of the SPU and try again.
 
-![crio_en](assets/crio_en.jpg)
+![crio_en](assets/)
 
 ## Pin mapping of the SPU 						  			
 
@@ -152,18 +158,34 @@ NC... Not Connected, which usually means not used in this application.
 
 The calculated IFT-Value, which represents the stability of the process  regarding chatter, is provided as an analogue signal from 0 - 10 V on  Pin number 0. However, this is just for the possibility of recording the IFT-Value and therefore, Pin 0 and Pin 1 are not connected with the  required analogue interface for the in-process parameter adaption of the control system. The IFT-Value can be scaled and its offset can be  changed in the Dashboard. (For more information about the Dashboard and  its configuration, see the Dashboard user manual)
 
-#### Digital IN (NI 9421): {-}
+#### Digital IN & OUT (NI 9375): {-}
 
-| PIN    | 0      | 1    | 2    | 3    | 4    | 5    | 6                      | 7                      | 8    | 9    |
-| ------ | ------ | ---- | ---- | ---- | ---- | ---- | ---------------------- | ---------------------- | ---- | ---- |
-| signal | Enable | NC   | NC   | NC   | NC   | NC   | NC / Tool Connection 1 | NC / Tool Connection 1 | NC   | GND  |
+| PIN | SIGNAL           | PIN   | SIGNAL         |
+|-----|------------------|-------|----------------|
+| 1   | DI/ACTIVATE RULE | 19    | DI/CONNECT-ID1 |
+| 2   | DI/RECORD        | 20    | DI/CONNECT-ID2 |
+| 3   | NC               | 21    | NC             |
+| 4   | NC               | 22    | NC             |
+| 5   | NC               | 23    | NC             |
+| 6   | NC               | 24    | NC             |
+| 7   | NC               | 25    | NC             |
+| 8   | NC               | 26    | NC             |
+| 9   | GND              | 27    | NC             |
+| 10  | DO/SYSTEM ACTIV  | 28    | NC             |
+| 11  | DO/CONNECTED     | 29    | NC             |
+| 12  | DO/RECORDING     | 30    | NC             |
+| 13  | DO/RULE ENABLED  | 31    | NC             |
+| 14  | DO/INTERFERENCE  | 32    | NC             |
+| 15  | NC               | 33    | NC             |
+| 16  | NC               | 34    | NC             |
+| 17  | NC               | 35    | NC             |
+| 18  | GND              | 36    | +24V           |
 
-In newer versions of the SPU it is possible to automatically connect too up to 3 pre defined toolholders with digital signals on the PIN 6 & 7 of the digital module.
+It is possible to automatically connect too up to 3 predefined toolholders with digital signals on the PIN 19 & 20 of the digital module. (ID3 = ID1 + ID2)
 
-![Verkabelung_en](assets/Verkabelung_en.jpg)
+![Verkabelung_en](assets/NI-9375-Verkabelung.png)
 
-## Digital control signal, SPU input 							  			
-
+## Digital control signal, SPU input & output 							  			
 In cooperation with the machine operator, the digital output of the  machine should be switched on and off. Meanwhile the voltage between the PIN and the corresponding ground is measured. This can be measured  either directly in the electrical cabinet or on the corresponding slots  on the SPU. If the control signal voltage is significantly different to  the expected voltages (0V, 24V) then there is probably something wrong  with the corresponding ground. If the reaction of the PIN is correct,  the cable designation, terminal number etc. should be recorded into the  installation document.
 
 It is advisable to test the function of the signal in a few steps:
