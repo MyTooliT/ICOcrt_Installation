@@ -577,7 +577,7 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 <div id="version-1" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">9</span> Version<a href="#version-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Diese Anleitung wurde geschrieben für eine SPU mit Dashboardversion v4.0.1.4. Für eine Installationsanleitung von älteren Versionen siehe nachstehenden Link:</p>
-<p><a href="https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20de.md">ältere Version</a></p>
+<p><a href="https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20de.md">Ältere Version</a></p>
 </div>
 <div id="system-komponenten" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">10</span> System Komponenten<a href="#system-komponenten" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -920,18 +920,19 @@ Der richtige Steckplatz des Steuersignals im Schaltschrank muss vor der Installa
 </div>
 <div id="digitale-steuersignale-spu-eingang-ausgang" class="section level2 hasAnchor" number="15.4">
 <h2><span class="header-section-number">15.4</span> Digitale Steuersignale, SPU Eingang &amp; Ausgang<a href="#digitale-steuersignale-spu-eingang-ausgang" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In Absprache mit dem Maschinenbediener soll der zu verifizierende Ausgang wechselweise ein- und ausgeschaltet werden. Dabei überprüft man die Spannung zwischen dem Steckplatz und der Bezugsmasse. Das kann entweder direkt am Schaltschrank oder an der von der SPU getrennten Klemmleiste erfolgen. Sollte die Steuerspannung von den erwarteten Spannungsniveaus (0V, 24V) signifikant abweichen, ist vermutlich etwas mit der Bezugsmasse nicht in Ordnung. Wenn die Reaktion korrekt erfolgt, sollten die Kabelbezeichnungen, Klemmen-Nummern usw. in der Installationsdokumentation vermerkt werden.</p>
-<p>Es empfielt sich, die Funktion dieses Signals in Stufen zu prüfen:</p>
+<p>In Absprache mit dem Maschinenbediener soll der zu verifizierenden Ausgänge wechselweise ein- und ausgeschaltet werden. Dabei überprüft man die Spannung zwischen dem Steckplatz und der Bezugsmasse. Das kann entweder direkt am Schaltschrank oder an der von der SPU getrennten Klemmleiste erfolgen. Sollte die Steuerspannung von den erwarteten Spannungsniveaus (0V, 24V) signifikant abweichen, ist vermutlich etwas mit der Bezugsmasse nicht in Ordnung. Wenn die Reaktion korrekt erfolgt, sollten die Kabelbezeichnungen, Klemmen-Nummern usw. in der Installationsdokumentation vermerkt werden.</p>
+<p>Es empfiehlt sich, die Funktion dieses Signals in Stufen zu prüfen:</p>
 <ol style="list-style-type: decimal">
 <li>Durch direktes Schreiben auf das Modul.</li>
 <li>Durch Schreiben der Variable in der Steuerung.</li>
 <li>Durch manuelles Setzen der entsprechenden M-Befehle.</li>
 </ol>
+<p>Die Verkabelung der digitalen Ausgänge der SPU kann direkt in der Maschinensteuerung überprüft werden. Hierfür ist es nötig im Dashboard z.B. eine Aufnahme zu starten, sich mit einem Halter zu verbinden etc. Danach in der Maschinensteuerung überprüfen ob das passende Signal gesetzt wurde.</p>
 </div>
 <div id="analoge-steuersignale-spu-ausgang" class="section level2 hasAnchor" number="15.5">
 <h2><span class="header-section-number">15.5</span> Analoge Steuersignale, SPU Ausgang<a href="#analoge-steuersignale-spu-ausgang" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Die analogen Steuersignale zum Einstellen des Maschineneingriffs werden von der SPU generiert. Die Spannungswerte reichen von 0-10V und entsprechen einer Reduktion des Overrides von 0-100%. Also je höher die Spannung, desto stärker die Reduktion von Vorschub bzw. Spindel. Der Wert in der Steuerung entspricht hierbei einer Multiplikation von Potenziometer und SPU Ausgabe.
-Es empfielt sich wieder stufenweise vorzugehen:</p>
+Es empfiehlt sich wieder stufenweise vorzugehen:</p>
 <p>Als Erstes die Kabel für Vorschub und Drehzahl Overrides vom Modul NI9263 der SPU trennen. Danach im Dashboard den Modus auf “direct output” stellen (für mehr Informationen zum Dashboard und dessen Konfigurationen siehe die Dashboard Benutzeranleitung). Nun die Overrides auf 40% Vorschub und 50% Drehzahl einstellen und im Anschluss die Spannungen an den zugehörigen Pins des Moduls NI 9263 der SPU messen. Das Ergebnis sollte 6V bei Vorschub und 5V bei Drehzahl sein. Nun können die Kabel zum Modul NI 9263 wieder verbunden werden. Nun die Spannungen bei gleichbleibenden Einstellungen an den Anschlussklemmen in der Maschine messen. Diese sollten wie zuvor 6V für Vorschub und 5V für Drehzahl betragen. Sollten die Spannungen stimmen, so müssen nun die Variablen in der Maschinensteuerung, welche diese repräsentieren, auf ihre Richtigkeit überprüft werden.</p>
 <p>Nun sollte noch ein Luftschnitt ohne Materialabtrag gemacht werden. Während des Schnittes sollten die Overrides verändert und überprüft werden, ob Vorschub und Drehzahl dadurch geändert werden und ob die angezeigten Werte der Maschinensteuerung mit diesen übereinstimmt. Danach sollte die SPU wieder in den “watch” Modus versetzt werden (für mehr Informationen zum Dashboard siehe die Dashboard Benutzeranleitung).</p>
 <p>Abschließend sollte nun die Verbindung mit dem sensorischen Werkzeughalter getestet werden. Dazu im Dashboard den gewünschten Halter auswählen und nach erfolgreichem Verbindungsaufbau den Halter schütteln und überprüfen, ob sich der IFT-Wert im Dashboard verändert.</p>
