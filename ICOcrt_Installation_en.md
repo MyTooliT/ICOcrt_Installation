@@ -93,7 +93,7 @@ Two cables, with a diameter of about 0,75mm², for the digital control signal, s
 The STU has to be positioned in the machining area to guarantee a  stable radio connection with the STH. Usually some trial and error is  involved to find a good spot for the STU. Therefore, the STU is mounted  with a magnetically tape and can swiftly be placed at different  locations. Generally, a location around the spindle would be  advantageous. However, in this area there is a higher possibility for  coolant and flying chips. In case of direct coolant and chip contact  with the STU, short-time radio connection instabilities and long-time  mechanical damage can happen. Installation on movable parts could damage the signal cables. Installation in the upper parts of the machining  area are often a good compromise. The front window of the STU should be  visible from the position of the machine operator, because the LEDs on  the STU are used as status indicators for the machine operator.
 
 | LED - STATE                            | MEANING                                        |
-| -------------------------------------- | ---------------------------------------------- |
+| :------------------------------------: | :--------------------------------------------: |
 | green LEDs in the corners are blinking | STU has Power and is not connected to a holder |
 | green LEDs in the corners are shining  | STU is connected to a holder                   |
 
@@ -153,7 +153,7 @@ NC... Not Connected, which usually means not used in this application.
 #### Analogue OUT (NI 9263): {-}
 
 | PIN    | 0         | 1       | 2             | 3        | 4                | 5           | 6    | 7    | 8    | 9    |
-| ------ | --------- | ------- | ------------- | -------- | ---------------- | ----------- | ---- | ---- | ---- | ---- |
+| :----: | :-------: | :-----: | :-----------: | :------: | :--------------: | :---------: | :--: | :--: | :--: | :--: |
 | signal | IFT-Value | IFT GND | Feed Override | Feed GND | Spindle Override | Spindle GND | NC   | NC   | NC   | NC   |
 
 The calculated IFT-Value, which represents the stability of the process  regarding chatter, is provided as an analogue signal from 0 - 10 V on  Pin number 0. However, this is just for the possibility of recording the IFT-Value and therefore, Pin 0 and Pin 1 are not connected with the  required analogue interface for the in-process parameter adaption of the control system. The IFT-Value can be scaled and its offset can be  changed in the Dashboard. (For more information about the Dashboard and  its configuration, see the Dashboard user manual)
@@ -161,7 +161,7 @@ The calculated IFT-Value, which represents the stability of the process  regardi
 #### Digital IN & OUT (NI 9375): {-}
 
 | PIN | SIGNAL           | PIN   | SIGNAL         |
-|-----|------------------|-------|----------------|
+|:---:|:----------------:|:-----:|:--------------:|
 | 1   | DI/ACTIVATE RULE | 19    | DI/CONNECT-ID1 |
 | 2   | DI/RECORD        | 20    | DI/CONNECT-ID2 |
 | 3   | NC               | 21    | NC             |

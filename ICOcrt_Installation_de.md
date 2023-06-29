@@ -91,7 +91,7 @@ Zwei Adern mit etwa 0,75mm2 für das digitale Eingriffssignal, ausgelöst durch 
 Die STU muss im Bearbeitungsraum der Maschine angebracht werden, um eine stabile Funkverbindung mit dem STH zu gewährleisten. Einen günstigen Platz für die STU auszusuchen erfordert oft etwas probieren. Daher ist die STU nur magnetisch befestigt und kann schnell manipuliert werden. Generell wäre ein Montageort nahe der Spindel günstig, jedoch kommt es dort auch oft zu vermehrtem Span-und Kühlmittel-Aufkommen. Dieses kann kurzfristig zu instabilen Funkverbindungen, sowie längerfristig zu Beschädigungen der STU führen. Montage auf beweglichen Teilen kann zu Problemen mit dem Anschlusskabel führen. Montagen im oberen Bereich des Maschinenraums sind oft ein guter Kompromiss. Das Frontglas sollte bevorzugt durch das Maschinenfenster einsehbar sein, da die LEDs als Status-Indikator verwendet werden.
 
 | LED - STATUS                    | BEDEUTUNG                                  |
-|---------------------------------|--------------------------------------------|
+|:-------------------------------:|:------------------------------------------:|
 |Grüne LEDs in den Ecken blinken  |STU ist aktiv und kein Halter ist verbunden |
 |Grüne LEDs in den Ecken leuchten |STU ist mit Halter verbunden                |
 
@@ -152,7 +152,7 @@ NB... Nicht benutzt. In dieser Anwendung gleichbedeutend damit, dass nichts ange
 #### Analoger Ausgang (NI 9263): {-}
 
 | PIN    | 0        | 1       | 2                 | 3            | 4                 | 5            | 6    | 7    | 8    | 9    |
-| ------ | -------- | ------- | ----------------- | ------------ | ----------------- | ------------ | ---- | ---- | ---- | ---- |
+| :----: | :------: | :-----: | :---------------: | :----------: | :---------------: | :----------: | :--: | :--: | :--: | :--: |
 | Signal | IFT-Wert | IFT-GND | Vorschub Override | Vorschub GND | Drehzahl Override | Drehzahl GND | NB   | NB   | NB   | NB   |
 
 Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems liefert, wird als analoges Signal mit 0-10V auf Pin 0 zur Verfügung gestellt. Dies bietet nur die Möglichkeit, den IFT-Wert zu erfassen. Deshalb müssen Pin 0 und 1 nicht mit dem analogen Anschluss der Maschine verbunden werden. Diese beiden Pins werden nicht für den Echtzeit Prozesseingriff benötigt. Die Skalierung und der Offset des ausgegebenen IFT-Wertes kann im Dashboard angepasst werden (für mehr Informationen zum Dashboard und dessen Einstellungen siehe die Dashboard Benutzeranleitung). 
@@ -160,7 +160,7 @@ Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems liefert,
 #### Digitaler Eingang & Ausgang (NI 9375): {-}
 
 | PIN | SIGNAL           | PIN   | SIGNAL         |
-|-----|------------------|-------|----------------|
+|:---:|:----------------:|:-----:|:--------------:|
 | 1   | DI/ACTIVATE RULE | 19    | DI/CONNECT-ID1 |
 | 2   | DI/RECORD        | 20    | DI/CONNECT-ID2 |
 | 3   | NB               | 21    | NB             |
