@@ -30,7 +30,7 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
-- Stationary Tranciever Unit - STU (5m Länge)
+- Stationary Transceiver Unit - STU (5m Länge)
 - Optional: Verlängerungskabel für STU (7m Länge)
 
 ## Benötigtes Verbrauchsmaterial 			  			
@@ -49,7 +49,7 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 - Beschriftungsgerät oder Klebe-Label, um die Kabel zu kennzeichnen
 - Multimeter
 - Ethernetkabel, um die SPU mit dem Laptop zu verbinden
-- Laptop mit Windows (Windows 7 Servicepack 1; Windows 8.1 Update 1 ; Windows 10) Betriebssystem und Adminberechtigung
+- Laptop mit Windows (Windows 7 Servicepack 1; Windows 8.1 Update 1 ; Windows 10) Betriebssystem und Administratorberechtigung
 
 ## Notwendige HR/Kompetenzen 		
 
@@ -143,7 +143,7 @@ Des Weiteren gehört der 24V Stecker der SPU nun mit dem 24V Netzteil verbunden.
 
 Nachdem die STU mit der SPU verbunden und die Versorgung aktiviert ist, sollte nach etwa 15-30 Sekunden Wartezeit die LED1 grün leuchten (LED1 befindet sich auf dem Modul auf dem die STU angeschlossen wird). Sollte die LED nicht leuchten, starten Sie die SPU neu mittels erneutem Trennen und Verbinden der Versorgung und versuchen Sie es erneut.
 
-![crio](assets/)
+![crio](assets/c-rio.png)
 
 ## Pinbelegung der SPU 					  			
 
@@ -233,4 +233,4 @@ Die restlichen LEDs haben alle eine andere Farbe als die erste. Diese LEDs symbo
 
 ## SPU:
 
-Die SPU hat mehrere LEDs. Die LEDs auf der oberen, linken Seite sind Status-LEDs welche die Versorgung und andere Parameter anzeigen. Wenn ein LAN-Kabel verbunden ist und das andere Ende des Kabels mit einem Netzwerk oder Computer verbunden ist, startet der LAN-Port zu blinken. Auf dem ersten Modul der SPU, dem CAN-Modul, befinden sich 2 LEDs. Diese signalisieren ob die CAN-Verbindung funktioniert oder nicht. Nach dem Starten der SPU braucht es etwa 30 Sekunden bis die LEDs anfangen grün zu leuchten. Wenn sie nicht leuchten oder rot leuchten muss die Verkabelung am CAN-Modul überprüft werde beziehungsweise die SPU neu gestartet werden. Das zweite Modul der SPU, das digitale Eingangs Modul, besitzt mehrere LEDs. Dieses LEDs symbolisieren ob an dem Jeweiligen PIN eine digitale 1 (LED leuchtet) oder eine 0 (LED leuchtet nicht) anliegt.
+Die SPU hat mehrere LEDs. Die LEDs auf der oberen, linken Seite sind Status-LEDs welche die Versorgung und andere Parameter anzeigen. Wenn ein LAN-Kabel verbunden ist und das andere Ende des Kabels mit einem Netzwerk oder Computer verbunden ist, startet der LAN-Port zu blinken. Auf dem ersten Modul der SPU, dem CAN-Modul, befinden sich 2 LEDs. Diese signalisieren ob die CAN-Verbindung funktioniert oder nicht. Nach dem Starten der SPU braucht es etwa 30 Sekunden bis die LEDs anfangen grün zu leuchten. Wenn sie nicht leuchten oder rot leuchten muss die Verkabelung am CAN-Modul überprüft werde beziehungsweise die SPU neu gestartet werden. 
