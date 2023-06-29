@@ -25,6 +25,10 @@ sth
 stu
 cc
 spu
+interface_specification
+implementation-of-2-analogue-input-channels
+implementation-of-at-least-one-digital-output-channel
+implementation-of-up-to-5-digital-input-channel
 version-1
 system-komponenten
 vorbereitung
@@ -52,3 +56,7 @@ sth-1
 stu-1
 cc-1
 spu-1
+schnittstellenspezifikation
+implementierung-von-2-analogen-eingängen
+implementierung-von-mindestens-einem-digitalen-ausgängen
+implementierung-von-bis-zu-5-digitalen-eingängen
