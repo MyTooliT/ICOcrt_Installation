@@ -4,6 +4,6 @@ delete_merged_file: true
 output_dir: Bookdown
 rmd_files:
   - ICOcrt_Installation_en.md
-  - Interface_specifiaction_en.md
+  - Interface_specification_en.md
   - ICOcrt_Installation_de.md
-  - Schnittstellenspezifiaktion_de.md
+  - Schnittstellenspezifikation_de.md
