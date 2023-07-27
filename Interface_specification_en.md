@@ -15,17 +15,17 @@ The system can be activated and deactivated synchronous to the NC program by inv
 ##### Possibility of more digital outputs {-}
 
 If the diverse functions:
-- connecting to holders
-- recording of the data
-- using the rule engine
+* connecting to holders
+* recording of the data
+* using the rule engine
 are wanted to be used individually it is needed to implement more digital outputs in the machine. For the recording of data and the activation of the rule engine you need 1 digital output each. At the moment the system can connect up to 3 holders automatically with 2 digital outputs. Therefore a maximum of 4 digital outputs are needed in the machine.
 
 ## Implementation of up to 5 digital input channel
 #### (also via synchronised action) to provide information of the ICOtronic system status to the machine {-}
 
 These are all optional. The 5 digital inputs in the machine can be used to see the following status information of the ICOtronic system if wired:
-- Is the system active
-- Is the system connected to a holder
-- Is the system recording
-- Is the rule engine active
-- Is the system interfering with the machine overrides
++ Is the system active
++ Is the system connected to a holder
++ Is the system recording
++ Is the rule engine active
++ Is the system interfering with the machine overrides
