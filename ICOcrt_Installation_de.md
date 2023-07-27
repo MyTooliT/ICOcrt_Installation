@@ -30,7 +30,7 @@ Dieses Dokument beschreibt die Installation des ICOtronic Control System.
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
-- Stationary Transceiver Unit - STU (5m Länge)
+- Stationary Transceiver Unit - STU (10m Länge)
 - Optional: Verlängerungskabel für STU (7m Länge)
 
 ## Benötigtes Verbrauchsmaterial 			  			

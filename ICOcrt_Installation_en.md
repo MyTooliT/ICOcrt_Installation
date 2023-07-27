@@ -30,7 +30,7 @@ This document describes the installation of the ICOtronic Control System.
 
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
-- Stationary Transceiver Unit - STU (~5m cable length - depending on the machine tool)
+- Stationary Transceiver Unit - STU (~10m cable length - depending on the machine tool)
 
 ## Required materials and tools 		
 
