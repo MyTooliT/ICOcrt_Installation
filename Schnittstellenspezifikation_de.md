@@ -18,9 +18,11 @@ Mit Aufruf der M-Funktion M190 im Teileprogramm wird ein digitaler Ausgang gesch
 ##### Möglichkeiten mit mehr digitalen Ausgängen {-}
 
 Wenn die verschiedenen Funktionen:
+
 - Verbindung zu Halter herstellen
 - Datenaufnahme aktivieren
 - Regelung aktivieren
+
 einzeln benutzt werden sollen dann müssen mehr digitale Ausgänge an der Steuerung implementiert werden.
 Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Ausgang benötigt. Für die Verbindung zu zuvor definierten Haltern können momentan 3 verschiedene Halter mittels 2 digitalen Ausgängen angesprochen werden. Daher ergibt sich eine momentane Anzahl von maximal 4 benötigten digitalen Ausgängen der Maschinensteuerung.
 
@@ -28,6 +30,7 @@ Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Au
 #### (ebenfalls über Synchronaktionen) zur Informationsabfrage der ICOtronic Systems Statusinformationen in der Maschine {-}
 
 Die Implementierung dieser Signale ist optional. Bis zu 5 digitale Eingänge der Maschine können genutzt werden um die folgenden Statusinformationen des ICOtronic Systems zu bekommen:
+
 - Ist das System aktiv
 - Ist das System verbunden mit einem Halter
 - Nimmt das System gerade Daten auf
