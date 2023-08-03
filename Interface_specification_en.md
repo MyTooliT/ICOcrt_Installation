@@ -32,3 +32,50 @@ These are all optional. The 5 digital inputs in the machine can be used to see t
 - Is the system recording
 - Is the rule engine active
 - Is the system interfering with the machine overrides
+
+## Functions and there needed machine ports
+
+| Functions | Analogue Input | Digital Output | Digital Input | Comment |
+|------------|----------------|-------------------|-------------------|-----------|
+|Feed override|+1|0|0||
+|Spindle speed override|+1|0|0||
+|Analogue feedback of the IFT-Value from SPU to machine|+1|0|0||
+|Start recording function through machine signal|0|+1|0||
+|Enable the rule engine through machine signal|0|+1|0||
+|Connect holder through machine signals|0|+log<sub>2</sub>(number of holders)+1|0|At the moment the firmware supports up to 3 holders to be connected via this function => max. +2 digital outputs|
+|SPU feedback to machine: System active|0|0|+1||
+|SPU feedback to machine: Holder connected|0|0|+1||
+|SPU feedback to machine: Recording active|0|0|+1||
+|SPU feedback to machine: Rule engine active|0|0|+1||
+|SPU feedback to machine: SPU interfering with the overrides|0|0|+1||
+|ALL FUNCTIONS|2|4|5|All functions used and connectable to max. 3 holders given by momentary state of the firmware|
+
+### Examples
+
+#### Only using the dashboard and no connection to the machine {-}
+
+If you only want to control the ICOtronic system via the dashboard and no adaptation of the overrides, then you don't need any connections to the machine. In this scenario you have to connect, record etc. via hand and the dashbaord on a computer connected to the SPU.
+
+#### Using the machine to record 1 holder {-}
+
+In this scenario you need 2 digital outputs on the machine. 1 digital output is used to connect/disconnect to the holder and 1 is used to start/stop the recording.
+
+#### Using the machine with 3 different holders to record and get feedback into the machine if the system is active, connected to a holder and recording {-}
+
+In this scenario you need 3 digital outputs and 3 digital inputs on the machine. 2 digital outputs are used to connect/disconnect to up to 3 holders. 1 digital output is used to start/stop the recording. 1 of the digital inputs is used for the information if the SPU is active, 1 digital input is used for the information if a holder is currently connected to the system and 1 digital input is used for the information if the system is recording at the moment.
+
+#### Using the rule engine to influence the overrides without feedback from the SPU with 1 holder and no recording {-}
+
+In this scenario you need 2 analogue inputs and 2 digital outputs on the machine. 2 analogue inputs, 1 for the feed override and 1 for the spindle speed override values. 1 digital output is needed to connect to a holder through the machine and 1 digital output is needed to activate the rule engine through the machine.
+
+#### Using the rule engine to influence the overrides with feedback from the SPU with 2 holders and recording {-}
+
+In this scenario you need 2 analogue inputs, 4 digital outputs and 5 digital inputs on the machine. 2 analogue inputs, 1 for the feed override and 1 for the spindle speed override values. 2 digital output are needed to connect to the 2 holder, 1 digital output is needed to start the recording and 1 digital output is needed to activate the rule engine through the machine. 1 digital input is needed for the information if the SPU is active, 1 digital input is needed for the information if a holder is connected to the system, 1 digital input is needed for the information if the system is recording at the moment, 1 digital input is needed for the information if the rule engine is enabled and 1 digital input is needed to get the information if the system is interfering with the overrides at the moment.
+
+#### Using OPCUA for system control without changing the overrides {-}
+
+In this scenario you don't need any connections to the machine. You only need an OPCUA **CLIENT** which is connected to the system via LAN-cable. 
+
+#### Using OPCUA for system control with usage of the rule engine {-}
+
+In this scenario you need 2 analogue inputs on the machine. 1 analogue input for the override of the feed speed and 1 analogue input for the override of the spindle speed. Additionally you need an OPCUA **CLIENT** which is connected to the system via LAN-cable.

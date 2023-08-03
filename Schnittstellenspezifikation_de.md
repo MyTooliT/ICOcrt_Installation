@@ -37,4 +37,49 @@ Die Implementierung dieser Signale ist optional. Bis zu 5 digitale Eingänge der
 - Ist die Regelung durch das System gerade aktiv
 - Greift das System gerade aktiv in die Overrides der Maschine ein
 
+## Funktionen und deren benötigte Maschinen Ports
 
+| Funktionen | Analog Eingang | Digitaler Ausgang | Digitaler Eingang | Anmerkung |
+|------------|----------------|-------------------|-------------------|-----------|
+|Regelung-Vorschub|+1|0|0||
+|Regelung-Drehzahl|+1|0|0||
+|Analoger Feedback des IFT-Wertes von SPU an Maschine|+1|0|0||
+|Aufnahme durch Maschine starten|0|+1|0||
+|Rule engine durch Maschine aktivieren|0|+1|0||
+|Halter durch Maschine verbinden|0|+log<sub>2</sub>(Halteranzahl)+1|0|Momentan sind maximal 3 Halter mittels Signalen von der Maschine verbindbar => Max. +2 Digitale Ausgänge|
+|SPU Rückmeldung an Maschine: System aktiv|0|0|+1||
+|SPU Rückmeldung an Maschine: Halter verbunden|0|0|+1||
+|SPU Rückmeldung an Maschine: Aufnahme läuft|0|0|+1||
+|SPU Rückmeldung an Maschine: Rule engine aktiv|0|0|+1||
+|SPU Rückmeldung an Maschine: Overrides werden überschrieben|0|0|+1||
+|ALLE FUNKTIONEN|2|4|5|Alle Funktionen ausgewählt und durch momentane Firmware maximal unterstützte 3 Halter|
+
+### Beispiele
+
+#### Verwendung des Dashboards ohne Verbindung zur Maschine {-}
+
+Wenn Sie das ICOtronic-System nur über das Dashboard steuern möchten, ohne Vorschub und Drehzahl anzupassen, benötigen Sie keine Verbindungen zur Maschine. In diesem Szenario müssen Sie Verbindungen und Aufnahmen manuell über das Dashboard auf einem mit der SPU verbundenen Computer vornehmen.
+
+#### Verwendung der Maschine zur Aufnahme eines Halters {-}
+
+In diesem Szenario benötigen Sie 2 digitale Ausgänge an der Maschine. Ein digitaler Ausgang wird zum Verbinden/Trennen des Halters verwendet und ein anderer zum Starten/Stoppen der Aufnahme.
+
+#### Verwendung der Maschine mit 3 verschiedenen Haltern zum Aufnehmen und Rückmeldungen an die Maschine ob das System aktiv ist, mit einem Halter verbunden ist und gerade eine Aufnahmen gemacht wird {-}
+
+In diesem Szenario benötigen Sie 3 digitale Ausgänge und 3 digitale Eingänge an der Maschine. 2 digitale Ausgänge werden verwendet, um bis zu 3 Halter zu verbinden/trennen. 1 digitaler Ausgang wird verwendet, um die Aufnahme zu starten/stoppen. 1 der digitalen Eingänge wird für die Information verwendet, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter derzeit mit dem System verbunden ist, und 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht.
+
+#### Verwendung der Rule-Engine zur Beeinflussung der Overrides mit 1 Halter ohne Rückmeldungen von der SPU und ohne Aufnahme {-}
+
+In diesem Szenario benötigen Sie 2 analoge Eingänge und 2 digitale Ausgänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 1 digitaler Ausgang wird benötigt, um über die Maschine eine Verbindung zu einem Halter herzustellen, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren.
+
+#### Verwendung der Rule-Engine zur Beeinflussung der Overrides, mit 2 Haltern, mit Rückmeldung von der SPU und Aufnahmen {-}
+
+In diesem Szenario benötigen Sie 2 analoge Eingänge, 4 digitale Ausgänge und 5 digitale Eingänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 2 digitale Ausgänge werden benötigt, um 2 Halter zu verbinden. 1 digitaler Ausgang wird benötigt, um die Aufnahme zu starten, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren. 1 digitaler Eingang wird für die Information benötigt, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter mit dem System verbunden ist, 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht, 1 digitaler Eingang für die Information, ob die Rule-Engine aktiviert ist, und 1 digitaler Eingang, um die Information zu erhalten, ob das System gerade die Overrides beeinträchtigt.
+
+#### Verwendung von OPCUA zur Systemsteuerung ohne Änderung der Overrides {-}
+
+In diesem Szenario benötigen Sie keine Verbindungen zur Maschine. Sie benötigen lediglich einen OPCUA-**CLIENT**, der über ein LAN-Kabel mit dem System verbunden ist.
+
+#### Verwendung von OPCUA zur Systemsteuerung mit Verwendung der Rule-Engine {-}
+
+In diesem Szenario benötigen Sie 2 analoge Eingänge an der Maschine. Einer für den Vorschub-Override und einer für den Drehzahl-Override. Zusätzlich benötigen Sie einen OPCUA-**CLIENT**, der über ein LAN-Kabel mit dem System verbunden ist.
