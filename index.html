@@ -115,6 +115,10 @@
 <li class="chapter" data-level="9.1" data-path=""><a href="#implementation-of-2-analogue-input-channels"><i class="fa fa-check"></i><b>9.1</b> Implementation of 2 analogue input channels</a></li>
 <li class="chapter" data-level="9.2" data-path=""><a href="#implementation-of-at-least-one-digital-output-channel"><i class="fa fa-check"></i><b>9.2</b> Implementation of at least one digital output channel</a></li>
 <li class="chapter" data-level="9.3" data-path=""><a href="#implementation-of-up-to-5-digital-input-channel"><i class="fa fa-check"></i><b>9.3</b> Implementation of up to 5 digital input channel</a></li>
+<li class="chapter" data-level="9.4" data-path=""><a href="#functions-and-there-needed-machine-ports"><i class="fa fa-check"></i><b>9.4</b> Functions and there needed machine ports</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path=""><a href="#examples"><i class="fa fa-check"></i><b>9.4.1</b> Examples</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>[Deutsch]</b></span></li>
 <li class="chapter" data-level="" data-path=""><a href="#icocrt-installationsanleitung"><i class="fa fa-check"></i>ICOcrt Installationsanleitung</a></li>
@@ -160,6 +164,10 @@
 <li class="chapter" data-level="18.1" data-path=""><a href="#implementierung-von-2-analogen-eingängen"><i class="fa fa-check"></i><b>18.1</b> Implementierung von 2 analogen Eingängen</a></li>
 <li class="chapter" data-level="18.2" data-path=""><a href="#implementierung-von-mindestens-einem-digitalen-ausgängen"><i class="fa fa-check"></i><b>18.2</b> Implementierung von mindestens einem digitalen Ausgängen</a></li>
 <li class="chapter" data-level="18.3" data-path=""><a href="#implementierung-von-bis-zu-5-digitalen-eingängen"><i class="fa fa-check"></i><b>18.3</b> Implementierung von bis zu 5 digitalen Eingängen</a></li>
+<li class="chapter" data-level="18.4" data-path=""><a href="#funktionen-und-deren-benötigte-maschinen-ports"><i class="fa fa-check"></i><b>18.4</b> Funktionen und deren benötigte Maschinen Ports</a>
+<ul>
+<li class="chapter" data-level="18.4.1" data-path=""><a href="#beispiele"><i class="fa fa-check"></i><b>18.4.1</b> Beispiele</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -621,7 +629,145 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 <li>Is the rule engine active</li>
 <li>Is the system interfering with the machine overrides</li>
 </ul>
+</div>
+</div>
+<div id="functions-and-there-needed-machine-ports" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Functions and there needed machine ports<a href="#functions-and-there-needed-machine-ports" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="20%" />
+<col width="24%" />
+<col width="24%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Functions</th>
+<th>Analogue Input</th>
+<th>Digital Output</th>
+<th>Digital Input</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Feed override</td>
+<td>+1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Spindle speed override</td>
+<td>+1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Analogue feedback of the IFT-Value from SPU to machine</td>
+<td>+1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Start recording function through machine signal</td>
+<td>0</td>
+<td>+1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Enable the rule engine through machine signal</td>
+<td>0</td>
+<td>+1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Connect holder through machine signals</td>
+<td>0</td>
+<td>+log<sub>2</sub>(number of holders)+1</td>
+<td>0</td>
+<td>At the moment the firmware supports up to 3 holders to be connected via this function =&gt; max. +2 digital outputs</td>
+</tr>
+<tr class="odd">
+<td>SPU feedback to machine: System active</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SPU feedback to machine: Holder connected</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU feedback to machine: Recording active</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SPU feedback to machine: Rule engine active</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU feedback to machine: SPU interfering with the overrides</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ALL FUNCTIONS</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>All functions used and connectable to max. 3 holders given by momentary state of the firmware</td>
+</tr>
+</tbody>
+</table>
+<div id="examples" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Examples<a href="#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="only-using-the-dashboard-and-no-connection-to-the-machine" class="section level4 unnumbered hasAnchor">
+<h4>Only using the dashboard and no connection to the machine<a href="#only-using-the-dashboard-and-no-connection-to-the-machine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If you only want to control the ICOtronic system via the dashboard and no adaptation of the overrides, then you don’t need any connections to the machine. In this scenario you have to connect, record etc. via hand and the dashbaord on a computer connected to the SPU.</p>
+</div>
+<div id="using-the-machine-to-record-1-holder" class="section level4 unnumbered hasAnchor">
+<h4>Using the machine to record 1 holder<a href="#using-the-machine-to-record-1-holder" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this scenario you need 2 digital outputs on the machine. 1 digital output is used to connect/disconnect to the holder and 1 is used to start/stop the recording.</p>
+</div>
+<div id="using-the-machine-with-3-different-holders-to-record-and-get-feedback-into-the-machine-if-the-system-is-active-connected-to-a-holder-and-recording" class="section level4 unnumbered hasAnchor">
+<h4>Using the machine with 3 different holders to record and get feedback into the machine if the system is active, connected to a holder and recording<a href="#using-the-machine-with-3-different-holders-to-record-and-get-feedback-into-the-machine-if-the-system-is-active-connected-to-a-holder-and-recording" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this scenario you need 3 digital outputs and 3 digital inputs on the machine. 2 digital outputs are used to connect/disconnect to up to 3 holders. 1 digital output is used to start/stop the recording. 1 of the digital inputs is used for the information if the SPU is active, 1 digital input is used for the information if a holder is currently connected to the system and 1 digital input is used for the information if the system is recording at the moment.</p>
+</div>
+<div id="using-the-rule-engine-to-influence-the-overrides-without-feedback-from-the-spu-with-1-holder-and-no-recording" class="section level4 unnumbered hasAnchor">
+<h4>Using the rule engine to influence the overrides without feedback from the SPU with 1 holder and no recording<a href="#using-the-rule-engine-to-influence-the-overrides-without-feedback-from-the-spu-with-1-holder-and-no-recording" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this scenario you need 2 analogue inputs and 2 digital outputs on the machine. 2 analogue inputs, 1 for the feed override and 1 for the spindle speed override values. 1 digital output is needed to connect to a holder through the machine and 1 digital output is needed to activate the rule engine through the machine.</p>
+</div>
+<div id="using-the-rule-engine-to-influence-the-overrides-with-feedback-from-the-spu-with-2-holders-and-recording" class="section level4 unnumbered hasAnchor">
+<h4>Using the rule engine to influence the overrides with feedback from the SPU with 2 holders and recording<a href="#using-the-rule-engine-to-influence-the-overrides-with-feedback-from-the-spu-with-2-holders-and-recording" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this scenario you need 2 analogue inputs, 4 digital outputs and 5 digital inputs on the machine. 2 analogue inputs, 1 for the feed override and 1 for the spindle speed override values. 2 digital output are needed to connect to the 2 holder, 1 digital output is needed to start the recording and 1 digital output is needed to activate the rule engine through the machine. 1 digital input is needed for the information if the SPU is active, 1 digital input is needed for the information if a holder is connected to the system, 1 digital input is needed for the information if the system is recording at the moment, 1 digital input is needed for the information if the rule engine is enabled and 1 digital input is needed to get the information if the system is interfering with the overrides at the moment.</p>
+</div>
+<div id="using-opcua-for-system-control-without-changing-the-overrides" class="section level4 unnumbered hasAnchor">
+<h4>Using OPCUA for system control without changing the overrides<a href="#using-opcua-for-system-control-without-changing-the-overrides" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this scenario you don’t need any connections to the machine. You only need an OPCUA <strong>CLIENT</strong> which is connected to the system via LAN-cable.</p>
+</div>
+<div id="using-opcua-for-system-control-with-usage-of-the-rule-engine" class="section level4 unnumbered hasAnchor">
+<h4>Using OPCUA for system control with usage of the rule engine<a href="#using-opcua-for-system-control-with-usage-of-the-rule-engine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In this scenario you need 2 analogue inputs on the machine. 1 analogue input for the override of the feed speed and 1 analogue input for the override of the spindle speed. Additionally you need an OPCUA <strong>CLIENT</strong> which is connected to the system via LAN-cable.</p>
 
+</div>
 </div>
 </div>
 </div>
@@ -1066,7 +1212,145 @@ Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Au
 <li>Ist die Regelung durch das System gerade aktiv</li>
 <li>Greift das System gerade aktiv in die Overrides der Maschine ein</li>
 </ul>
+</div>
+</div>
+<div id="funktionen-und-deren-benötigte-maschinen-ports" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Funktionen und deren benötigte Maschinen Ports<a href="#funktionen-und-deren-benötigte-maschinen-ports" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="20%" />
+<col width="24%" />
+<col width="24%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funktionen</th>
+<th>Analog Eingang</th>
+<th>Digitaler Ausgang</th>
+<th>Digitaler Eingang</th>
+<th>Anmerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Regelung-Vorschub</td>
+<td>+1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Regelung-Drehzahl</td>
+<td>+1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Analoger Feedback des IFT-Wertes von SPU an Maschine</td>
+<td>+1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Aufnahme durch Maschine starten</td>
+<td>0</td>
+<td>+1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Rule engine durch Maschine aktivieren</td>
+<td>0</td>
+<td>+1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Halter durch Maschine verbinden</td>
+<td>0</td>
+<td>+log<sub>2</sub>(Halteranzahl)+1</td>
+<td>0</td>
+<td>Momentan sind maximal 3 Halter mittels Signalen von der Maschine verbindbar =&gt; Max. +2 Digitale Ausgänge</td>
+</tr>
+<tr class="odd">
+<td>SPU Rückmeldung an Maschine: System aktiv</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SPU Rückmeldung an Maschine: Halter verbunden</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU Rückmeldung an Maschine: Aufnahme läuft</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SPU Rückmeldung an Maschine: Rule engine aktiv</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU Rückmeldung an Maschine: Overrides werden überschrieben</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ALLE FUNKTIONEN</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>Alle Funktionen ausgewählt und durch momentane Firmware maximal unterstützte 3 Halter</td>
+</tr>
+</tbody>
+</table>
+<div id="beispiele" class="section level3 hasAnchor" number="18.4.1">
+<h3><span class="header-section-number">18.4.1</span> Beispiele<a href="#beispiele" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="verwendung-des-dashboards-ohne-verbindung-zur-maschine" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung des Dashboards ohne Verbindung zur Maschine<a href="#verwendung-des-dashboards-ohne-verbindung-zur-maschine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Wenn Sie das ICOtronic-System nur über das Dashboard steuern möchten, ohne Vorschub und Drehzahl anzupassen, benötigen Sie keine Verbindungen zur Maschine. In diesem Szenario müssen Sie Verbindungen und Aufnahmen manuell über das Dashboard auf einem mit der SPU verbundenen Computer vornehmen.</p>
+</div>
+<div id="verwendung-der-maschine-zur-aufnahme-eines-halters" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung der Maschine zur Aufnahme eines Halters<a href="#verwendung-der-maschine-zur-aufnahme-eines-halters" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In diesem Szenario benötigen Sie 2 digitale Ausgänge an der Maschine. Ein digitaler Ausgang wird zum Verbinden/Trennen des Halters verwendet und ein anderer zum Starten/Stoppen der Aufnahme.</p>
+</div>
+<div id="verwendung-der-maschine-mit-3-verschiedenen-haltern-zum-aufnehmen-und-rückmeldungen-an-die-maschine-ob-das-system-aktiv-ist-mit-einem-halter-verbunden-ist-und-gerade-eine-aufnahmen-gemacht-wird" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung der Maschine mit 3 verschiedenen Haltern zum Aufnehmen und Rückmeldungen an die Maschine ob das System aktiv ist, mit einem Halter verbunden ist und gerade eine Aufnahmen gemacht wird<a href="#verwendung-der-maschine-mit-3-verschiedenen-haltern-zum-aufnehmen-und-rückmeldungen-an-die-maschine-ob-das-system-aktiv-ist-mit-einem-halter-verbunden-ist-und-gerade-eine-aufnahmen-gemacht-wird" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In diesem Szenario benötigen Sie 3 digitale Ausgänge und 3 digitale Eingänge an der Maschine. 2 digitale Ausgänge werden verwendet, um bis zu 3 Halter zu verbinden/trennen. 1 digitaler Ausgang wird verwendet, um die Aufnahme zu starten/stoppen. 1 der digitalen Eingänge wird für die Information verwendet, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter derzeit mit dem System verbunden ist, und 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht.</p>
+</div>
+<div id="verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-1-halter-ohne-rückmeldungen-von-der-spu-und-ohne-aufnahme" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung der Rule-Engine zur Beeinflussung der Overrides mit 1 Halter ohne Rückmeldungen von der SPU und ohne Aufnahme<a href="#verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-1-halter-ohne-rückmeldungen-von-der-spu-und-ohne-aufnahme" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In diesem Szenario benötigen Sie 2 analoge Eingänge und 2 digitale Ausgänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 1 digitaler Ausgang wird benötigt, um über die Maschine eine Verbindung zu einem Halter herzustellen, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren.</p>
+</div>
+<div id="verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-2-haltern-mit-rückmeldung-von-der-spu-und-aufnahmen" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung der Rule-Engine zur Beeinflussung der Overrides, mit 2 Haltern, mit Rückmeldung von der SPU und Aufnahmen<a href="#verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-2-haltern-mit-rückmeldung-von-der-spu-und-aufnahmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In diesem Szenario benötigen Sie 2 analoge Eingänge, 4 digitale Ausgänge und 5 digitale Eingänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 2 digitale Ausgänge werden benötigt, um 2 Halter zu verbinden. 1 digitaler Ausgang wird benötigt, um die Aufnahme zu starten, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren. 1 digitaler Eingang wird für die Information benötigt, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter mit dem System verbunden ist, 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht, 1 digitaler Eingang für die Information, ob die Rule-Engine aktiviert ist, und 1 digitaler Eingang, um die Information zu erhalten, ob das System gerade die Overrides beeinträchtigt.</p>
+</div>
+<div id="verwendung-von-opcua-zur-systemsteuerung-ohne-änderung-der-overrides" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung von OPCUA zur Systemsteuerung ohne Änderung der Overrides<a href="#verwendung-von-opcua-zur-systemsteuerung-ohne-änderung-der-overrides" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In diesem Szenario benötigen Sie keine Verbindungen zur Maschine. Sie benötigen lediglich einen OPCUA-<strong>CLIENT</strong>, der über ein LAN-Kabel mit dem System verbunden ist.</p>
+</div>
+<div id="verwendung-von-opcua-zur-systemsteuerung-mit-verwendung-der-rule-engine" class="section level4 unnumbered hasAnchor">
+<h4>Verwendung von OPCUA zur Systemsteuerung mit Verwendung der Rule-Engine<a href="#verwendung-von-opcua-zur-systemsteuerung-mit-verwendung-der-rule-engine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In diesem Szenario benötigen Sie 2 analoge Eingänge an der Maschine. Einer für den Vorschub-Override und einer für den Drehzahl-Override. Zusätzlich benötigen Sie einen OPCUA-<strong>CLIENT</strong>, der über ein LAN-Kabel mit dem System verbunden ist.</p>
 
+</div>
 </div>
 </div>
 </div>
