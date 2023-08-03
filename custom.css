@@ -2,10 +2,10 @@ p {
     text-align: justify;
 }
 
-td{
+table td{
   border: 1px solid;
 }
-th {
+table th {
   border: 2px solid;
 }
 
