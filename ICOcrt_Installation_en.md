@@ -160,26 +160,26 @@ The calculated IFT-Value, which represents the stability of the process  regardi
 
 #### Digital IN & OUT (NI 9375): {-}
 
-| PIN | SIGNAL           | PIN   | SIGNAL         |
-|:---:|:----------------:|:-----:|:--------------:|
-| 1   | DI/ACTIVATE RULE | 19    | DI/CONNECT-ID1 |
-| 2   | DI/RECORD        | 20    | DI/CONNECT-ID2 |
-| 3   | NC               | 21    | NC             |
-| 4   | NC               | 22    | NC             |
-| 5   | NC               | 23    | NC             |
-| 6   | NC               | 24    | NC             |
-| 7   | NC               | 25    | NC             |
-| 8   | NC               | 26    | NC             |
-| 9   | GND              | 27    | NC             |
-| 10  | DO/SYSTEM ACTIV  | 28    | NC             |
-| 11  | DO/CONNECTED     | 29    | NC             |
-| 12  | DO/RECORDING     | 30    | NC             |
-| 13  | DO/RULE ENABLED  | 31    | NC             |
-| 14  | DO/INTERFERENCE  | 32    | NC             |
-| 15  | NC               | 33    | NC             |
-| 16  | NC               | 34    | NC             |
-| 17  | NC               | 35    | NC             |
-| 18  | GND              | 36    | +24V           |
+| PIN | SIGNAL           |&brvbar;| PIN   | SIGNAL         |
+|:---:|:----------------:|:------:|:-----:|:--------------:|
+| 1   | DI/ACTIVATE RULE |&brvbar;| 19    | DI/CONNECT-ID1 |
+| 2   | DI/RECORD        |&brvbar;| 20    | DI/CONNECT-ID2 |
+| 3   | NC               |&brvbar;| 21    | NC             |
+| 4   | NC               |&brvbar;| 22    | NC             |
+| 5   | NC               |&brvbar;| 23    | NC             |
+| 6   | NC               |&brvbar;| 24    | NC             |
+| 7   | NC               |&brvbar;| 25    | NC             |
+| 8   | NC               |&brvbar;| 26    | NC             |
+| 9   | GND              |&brvbar;| 27    | NC             |
+| 10  | DO/SYSTEM ACTIV  |&brvbar;| 28    | NC             |
+| 11  | DO/CONNECTED     |&brvbar;| 29    | NC             |
+| 12  | DO/RECORDING     |&brvbar;| 30    | NC             |
+| 13  | DO/RULE ENABLED  |&brvbar;| 31    | NC             |
+| 14  | DO/INTERFERENCE  |&brvbar;| 32    | NC             |
+| 15  | NC               |&brvbar;| 33    | NC             |
+| 16  | NC               |&brvbar;| 34    | NC             |
+| 17  | NC               |&brvbar;| 35    | NC             |
+| 18  | GND              |&brvbar;| 36    | +24V           |
 
 It is possible to automatically connect too up to 3 predefined toolholders with digital signals on the PIN 19 & 20 of the digital module. (ID3 = ID1 + ID2)
 

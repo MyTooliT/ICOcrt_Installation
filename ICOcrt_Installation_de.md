@@ -159,26 +159,26 @@ Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems liefert,
 
 #### Digitaler Eingang & Ausgang (NI 9375): {-}
 
-| PIN | SIGNAL           | PIN   | SIGNAL         |
-|:---:|:----------------:|:-----:|:--------------:|
-| 1   | DI/ACTIVATE RULE | 19    | DI/CONNECT-ID1 |
-| 2   | DI/RECORD        | 20    | DI/CONNECT-ID2 |
-| 3   | NB               | 21    | NB             |
-| 4   | NB               | 22    | NB             |
-| 5   | NB               | 23    | NB             |
-| 6   | NB               | 24    | NB             |
-| 7   | NB               | 25    | NB             |
-| 8   | NB               | 26    | NB             |
-| 9   | GND              | 27    | NB             |
-| 10  | DO/SYSTEM ACTIV  | 28    | NB             |
-| 11  | DO/CONNECTED     | 29    | NB             |
-| 12  | DO/RECORDING     | 30    | NB             |
-| 13  | DO/RULE ENABLED  | 31    | NB             |
-| 14  | DO/INTERFERENCE  | 32    | NB             |
-| 15  | NB               | 33    | NB             |
-| 16  | NB               | 34    | NB             |
-| 17  | NB               | 35    | NB             |
-| 18  | GND              | 36    | +24V           |
+| PIN | SIGNAL           |&brvbar;| PIN   | SIGNAL         |
+|:---:|:----------------:|:------:|:-----:|:--------------:|
+| 1   | DI/ACTIVATE RULE |&brvbar;| 19    | DI/CONNECT-ID1 |
+| 2   | DI/RECORD        |&brvbar;| 20    | DI/CONNECT-ID2 |
+| 3   | NB               |&brvbar;| 21    | NB             |
+| 4   | NB               |&brvbar;| 22    | NB             |
+| 5   | NB               |&brvbar;| 23    | NB             |
+| 6   | NB               |&brvbar;| 24    | NB             |
+| 7   | NB               |&brvbar;| 25    | NB             |
+| 8   | NB               |&brvbar;| 26    | NB             |
+| 9   | GND              |&brvbar;| 27    | NB             |
+| 10  | DO/SYSTEM ACTIV  |&brvbar;| 28    | NB             |
+| 11  | DO/CONNECTED     |&brvbar;| 29    | NB             |
+| 12  | DO/RECORDING     |&brvbar;| 30    | NB             |
+| 13  | DO/RULE ENABLED  |&brvbar;| 31    | NB             |
+| 14  | DO/INTERFERENCE  |&brvbar;| 32    | NB             |
+| 15  | NB               |&brvbar;| 33    | NB             |
+| 16  | NB               |&brvbar;| 34    | NB             |
+| 17  | NB               |&brvbar;| 35    | NB             |
+| 18  | GND              |&brvbar;| 36    | +24V           |
 
 Die SPU kann mittels der digitalen Eingänge auf Pin 19&20 bis zu 3 zuvor im Dashboard definierte Halter automatisch verbinden. (ID3 = ID1 + ID2)
 
