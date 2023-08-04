@@ -159,13 +159,13 @@ Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems liefert,
 
 #### Digitaler Eingang & Ausgang (NI 9375): {-}
 
-| PIN | SIGNAL           |&brvbar;| PIN   | SIGNAL         |
+| PIN | SIGNAL           |&verbar;| PIN   | SIGNAL         |
 |:---:|:----------------:|:------:|:-----:|:--------------:|
-| 1   | DI/ACTIVATE RULE |&brvbar;| 19    | DI/CONNECT-ID1 |
-| 2   | DI/RECORD        |&brvbar;| 20    | DI/CONNECT-ID2 |
-| 3   | NB               |&brvbar;| 21    | NB             |
-| 4   | NB               |&brvbar;| 22    | NB             |
-| 5   | NB               |&brvbar;| 23    | NB             |
+| 1   | DI/ACTIVATE RULE |&verbar;| 19    | DI/CONNECT-ID1 |
+| 2   | DI/RECORD        |&verbar;| 20    | DI/CONNECT-ID2 |
+| 3   | NB               |&vert;| 21    | NB             |
+| 4   | NB               |&vert;| 22    | NB             |
+| 5   | NB               |&vert;| 23    | NB             |
 | 6   | NB               |&brvbar;| 24    | NB             |
 | 7   | NB               |&brvbar;| 25    | NB             |
 | 8   | NB               |&brvbar;| 26    | NB             |
