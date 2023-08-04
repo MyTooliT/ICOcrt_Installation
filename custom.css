@@ -3,19 +3,14 @@ p {
 }
 
 th {
+  border: thick solid;
   border-bottom: thick double;
-  border-top: thick solid;
-  column-rule: thick solid;
-  border-left: thick solid;
-  border-right: thick solid;
 
 }
 
 td {
-  border-bottom: medium solid;
-  column-rule: medium solid;
-  border-left: medium solid;
-  border-right: medium solid;
+  border: medium solid;
+  border-top: none;
 }
 
 table {
