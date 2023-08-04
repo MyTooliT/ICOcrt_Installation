@@ -4,15 +4,18 @@ p {
 
 th {
   border-bottom: thick double;
+  border-top: thick solid;
+  border-left: thick solid;
+  border-right: thick solid;
 }
 
 td {
-  border: 1px solid;
-  outline: 1px solid;
+  border-bottom: medium double;
+  border-left: medium solid;
+  border-right: medium solid;
 }
 
 table {
-  border: 3 px;
   width: 100%;
   border-collapse: collapse;
   text-align: center;
