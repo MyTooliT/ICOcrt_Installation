@@ -5,16 +5,19 @@ p {
 th {
   border: thick solid;
   border-bottom: thick double;
+  border-left: thin solid;
+  border-right: thin solid;
 }
 
 td {
   border: medium solid;
   border-top: none;
+  border-left: thin solid;
+  border-right: thin solid;
 }
 
 table {
   width: 100%;
   border: thick solid;
-  border-inline: thin solid;
   text-align: center;
 }
