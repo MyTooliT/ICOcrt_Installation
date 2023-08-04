@@ -4,7 +4,6 @@ p {
 
 th {
   border: 2px solid;
-  outline: 2px solid;
 }
 
 td {
@@ -13,6 +12,7 @@ td {
 }
 
 table {
+  border: 2 px;
   width: 100%;
   border-collapse: collapse;
   text-align: center;
