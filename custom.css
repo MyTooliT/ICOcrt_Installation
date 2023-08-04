@@ -5,7 +5,7 @@ p {
 th {
   border: thick solid;
   border-bottom: thick double;
-
+  border-left: thin solid;
 }
 
 td {
