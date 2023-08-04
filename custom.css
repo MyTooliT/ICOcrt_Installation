@@ -21,7 +21,4 @@ table {
   border: 4px solid;
   border-collapse: collapse;
   text-align: center;
-  column-rule-style: solid;
-  column-rule-width: 2px;
-  outline: solid;
 }
