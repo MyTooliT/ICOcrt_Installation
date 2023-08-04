@@ -4,13 +4,18 @@ p {
 
 table th {
   border: 2px solid;
+  border-left: solid;
+  border-right: solid;
 }
 
 table td {
   border: 1px solid;
+  border-left: solid;
+  border-right: solid;
 }
 
 table {
+  width: 100%;
   border: 4px solid;
   border-collapse: collapse;
   text-align: center;
