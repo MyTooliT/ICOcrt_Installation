@@ -2,17 +2,13 @@ p {
     text-align: justify;
 }
 
-table th {
+th {
   border: 2px solid;
-  border-left: solid;
-  border-right: solid;
   outline: solid;
 }
 
-table td {
+td {
   border: 1px solid;
-  border-left: solid;
-  border-right: solid;
   outline: solid;
 }
 
