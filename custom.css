@@ -5,7 +5,6 @@ p {
 th {
   border: thick solid;
   border-bottom: thick double;
-  border-left: thin solid;
 }
 
 td {
@@ -16,5 +15,6 @@ td {
 table {
   width: 100%;
   border: thick solid;
+  border-inline: thin solid;
   text-align: center;
 }
