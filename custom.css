@@ -2,10 +2,16 @@ p {
     text-align: justify;
 }
 
+table th {
+  border: 2px solid;
+}
+
+table td {
+  border: 1px solid;
+}
+
 table {
   border: 4px solid;
   border-collapse: collapse;
   text-align: center;
-  column-rule-style: solid;
-  column-rule-width: 2px;
 }
