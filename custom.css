@@ -6,12 +6,14 @@ table th {
   border: 2px solid;
   border-left: solid;
   border-right: solid;
+  outline: solid;
 }
 
 table td {
   border: 1px solid;
   border-left: solid;
   border-right: solid;
+  outline: solid;
 }
 
 table {
@@ -21,4 +23,5 @@ table {
   text-align: center;
   column-rule-style: solid;
   column-rule-width: 2px;
+  outline: solid;
 }
