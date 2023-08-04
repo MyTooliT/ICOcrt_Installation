@@ -15,6 +15,6 @@ td {
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border: medium solid;
   text-align: center;
 }
