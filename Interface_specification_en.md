@@ -42,13 +42,13 @@ These are all optional. The 5 digital inputs in the machine can be used to see t
 |Analogue feedback of the IFT-Value from SPU to machine|+1|0|0||
 |Start recording function through machine signal|0|+1|0||
 |Enable the rule engine through machine signal|0|+1|0||
-|Connect holder through machine signals|0|+log<sub>2</sub>(number of holders)+1|0|At the moment the firmware supports up to 3 holders to be connected via this function => max. +2 digital outputs|
+|Connect holder through machine signals|0|+log<sub>2</sub>(number of holders)+1|0|The firmware supports up to 255 holders to be connected via this function => max. +8 digital outputs|
 |SPU feedback to machine: System active|0|0|+1||
 |SPU feedback to machine: Holder connected|0|0|+1||
 |SPU feedback to machine: Recording active|0|0|+1||
 |SPU feedback to machine: Rule engine active|0|0|+1||
 |SPU feedback to machine: SPU interfering with the overrides|0|0|+1||
-|ALL FUNCTIONS|2|4|5|All functions used and connectable to max. 3 holders given by momentary state of the firmware|
+|ALL FUNCTIONS|3|10|5|All functions used and connectable to max. 255 holders|
 
 ### Examples
 

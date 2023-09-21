@@ -46,13 +46,13 @@ Die Implementierung dieser Signale ist optional. Bis zu 5 digitale Eingänge der
 |Analoger Feedback des IFT-Wertes von SPU an Maschine|+1|0|0||
 |Aufnahme durch Maschine starten|0|+1|0||
 |Rule engine durch Maschine aktivieren|0|+1|0||
-|Halter durch Maschine verbinden|0|+log<sub>2</sub>(Halteranzahl)+1|0|Momentan sind maximal 3 Halter mittels Signalen von der Maschine verbindbar => Max. +2 Digitale Ausgänge|
+|Halter durch Maschine verbinden|0|+log<sub>2</sub>(Halteranzahl)+1|0|Es sind maximal 255 Halter mittels Signalen von der Maschine verbindbar => Max. +8 Digitale Ausgänge|
 |SPU Rückmeldung an Maschine: System aktiv|0|0|+1||
 |SPU Rückmeldung an Maschine: Halter verbunden|0|0|+1||
 |SPU Rückmeldung an Maschine: Aufnahme läuft|0|0|+1||
 |SPU Rückmeldung an Maschine: Rule engine aktiv|0|0|+1||
 |SPU Rückmeldung an Maschine: Overrides werden überschrieben|0|0|+1||
-|ALLE FUNKTIONEN|2|4|5|Alle Funktionen ausgewählt und durch momentane Firmware maximal unterstützte 3 Halter|
+|ALLE FUNKTIONEN|3|10|5|Alle Funktionen ausgewählt und maximal unterstützte 255 Halter|
 
 ### Beispiele
 
