@@ -28,7 +28,7 @@ spu
 interface_specification
 implementation-of-2-analogue-input-channels
 implementation-of-at-least-one-digital-output-channel
-implementation-of-up-to-5-digital-input-channel
+implementation-of-up-to-8-digital-input-channel
 functions-and-there-needed-machine-ports
 examples
 version-1
@@ -61,6 +61,6 @@ spu-1
 schnittstellenspezifikation
 implementierung-von-2-analogen-eingängen
 implementierung-von-mindestens-einem-digitalen-ausgängen
-implementierung-von-bis-zu-5-digitalen-eingängen
+implementierung-von-bis-zu-8-digitalen-eingängen
 funktionen-und-deren-benötigte-maschinen-ports
 beispiele

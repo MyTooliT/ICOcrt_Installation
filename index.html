@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>ICOcrt_Installation_Documentation.knit</title>
   <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="ICOcrt_Installation_Documentation.knit" />
   <meta property="og:type" content="book" />
@@ -113,7 +113,7 @@
 <ul>
 <li class="chapter" data-level="9.1" data-path=""><a href="#implementation-of-2-analogue-input-channels"><i class="fa fa-check"></i><b>9.1</b> Implementation of 2 analogue input channels</a></li>
 <li class="chapter" data-level="9.2" data-path=""><a href="#implementation-of-at-least-one-digital-output-channel"><i class="fa fa-check"></i><b>9.2</b> Implementation of at least one digital output channel</a></li>
-<li class="chapter" data-level="9.3" data-path=""><a href="#implementation-of-up-to-5-digital-input-channel"><i class="fa fa-check"></i><b>9.3</b> Implementation of up to 5 digital input channel</a></li>
+<li class="chapter" data-level="9.3" data-path=""><a href="#implementation-of-up-to-8-digital-input-channel"><i class="fa fa-check"></i><b>9.3</b> Implementation of up to 8 digital input channel</a></li>
 <li class="chapter" data-level="9.4" data-path=""><a href="#functions-and-there-needed-machine-ports"><i class="fa fa-check"></i><b>9.4</b> Functions and there needed machine ports</a>
 <ul>
 <li class="chapter" data-level="9.4.1" data-path=""><a href="#examples"><i class="fa fa-check"></i><b>9.4.1</b> Examples</a></li>
@@ -162,7 +162,7 @@
 <ul>
 <li class="chapter" data-level="18.1" data-path=""><a href="#implementierung-von-2-analogen-eingängen"><i class="fa fa-check"></i><b>18.1</b> Implementierung von 2 analogen Eingängen</a></li>
 <li class="chapter" data-level="18.2" data-path=""><a href="#implementierung-von-mindestens-einem-digitalen-ausgängen"><i class="fa fa-check"></i><b>18.2</b> Implementierung von mindestens einem digitalen Ausgängen</a></li>
-<li class="chapter" data-level="18.3" data-path=""><a href="#implementierung-von-bis-zu-5-digitalen-eingängen"><i class="fa fa-check"></i><b>18.3</b> Implementierung von bis zu 5 digitalen Eingängen</a></li>
+<li class="chapter" data-level="18.3" data-path=""><a href="#implementierung-von-bis-zu-8-digitalen-eingängen"><i class="fa fa-check"></i><b>18.3</b> Implementierung von bis zu 8 digitalen Eingängen</a></li>
 <li class="chapter" data-level="18.4" data-path=""><a href="#funktionen-und-deren-benötigte-maschinen-ports"><i class="fa fa-check"></i><b>18.4</b> Funktionen und deren benötigte Maschinen Ports</a>
 <ul>
 <li class="chapter" data-level="18.4.1" data-path=""><a href="#beispiele"><i class="fa fa-check"></i><b>18.4.1</b> Beispiele</a></li>
@@ -196,8 +196,8 @@
 </div>
 <div id="version" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> Version<a href="#version" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This manual was written for SPUs with a Dashboard version v4.0.1.4. If you need an installation manual for an older version see the following link:</p>
-<p><a href="https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20en.md">older version</a></p>
+<p>This manual was written for SPUs with a Dashboard version v5.3.0.4. If you need an installation manual for an older version see the following link:</p>
+<p><a href="https://github.com/MyTooliT/ICOcrt_Installation/blob/main/ICOcrt_Installation_en.md">older version</a></p>
 </div>
 <div id="system-components" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> System Components<a href="#system-components" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -206,7 +206,6 @@
 <li>the Sensory Tool Holder (STH), which features the acceleration sensor, a transceiver and a battery</li>
 <li>the Stationary Transceiver Unit (STU), which is located inside the machine room</li>
 <li>the Signal Processing Unit (SPU), which is connected to the STU via cable and must be located outside the machine room</li>
-<li>the Charging Cradle (CC), which is used for charging the battery of the STH</li>
 </ul>
 <p><img src="assets/icocrtl.png" alt="icocrtl" /></p>
 </div>
@@ -221,6 +220,7 @@
 <li>Signal Processing Unit – SPU</li>
 <li>Sensory Tool Holder – STH</li>
 <li>Stationary Transceiver Unit - STU (~10m cable length - depending on the machine tool)</li>
+<li>Optional: Extension cable for the STU (7m)</li>
 </ul>
 </div>
 </div>
@@ -415,6 +415,13 @@ CAUTION: it has to be the 2019 SP1 version</li>
 <div id="digital-in-out-ni-9375" class="section level4 unnumbered hasAnchor">
 <h4>Digital IN &amp; OUT (NI 9375):<a href="#digital-in-out-ni-9375" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table>
+<colgroup>
+<col width="7%" />
+<col width="40%" />
+<col width="11%" />
+<col width="10%" />
+<col width="30%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">PIN</th>
@@ -427,10 +434,10 @@ CAUTION: it has to be the 2019 SP1 version</li>
 <tbody>
 <tr class="odd">
 <td align="center">1</td>
-<td align="center">DI/ACTIVATE RULE</td>
+<td align="center">DI/CONNECT</td>
 <td align="center">¦</td>
 <td align="center">19</td>
-<td align="center">DI/CONNECT-ID1</td>
+<td align="center">DI/CONNECT-ID1(LSB)</td>
 </tr>
 <tr class="even">
 <td align="center">2</td>
@@ -441,45 +448,45 @@ CAUTION: it has to be the 2019 SP1 version</li>
 </tr>
 <tr class="odd">
 <td align="center">3</td>
-<td align="center">NC</td>
+<td align="center">DI/ACTIVATE RULE</td>
 <td align="center">¦</td>
 <td align="center">21</td>
-<td align="center">NC</td>
+<td align="center">DI/CONNECT-ID3</td>
 </tr>
 <tr class="even">
 <td align="center">4</td>
 <td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">22</td>
-<td align="center">NC</td>
+<td align="center">DI/CONNECT-ID4</td>
 </tr>
 <tr class="odd">
 <td align="center">5</td>
 <td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">23</td>
-<td align="center">NC</td>
+<td align="center">DI/CONNECT-ID5</td>
 </tr>
 <tr class="even">
 <td align="center">6</td>
 <td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">24</td>
-<td align="center">NC</td>
+<td align="center">DI/CONNECT-ID6</td>
 </tr>
 <tr class="odd">
 <td align="center">7</td>
 <td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">25</td>
-<td align="center">NC</td>
+<td align="center">DI/CONNECT-ID7</td>
 </tr>
 <tr class="even">
 <td align="center">8</td>
 <td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">26</td>
-<td align="center">NC</td>
+<td align="center">DI/CONNECT-ID8(MSB)</td>
 </tr>
 <tr class="odd">
 <td align="center">9</td>
@@ -525,21 +532,21 @@ CAUTION: it has to be the 2019 SP1 version</li>
 </tr>
 <tr class="odd">
 <td align="center">15</td>
-<td align="center">NC</td>
+<td align="center">DO/DASHBOARD CONTROL ACTIV</td>
 <td align="center">¦</td>
 <td align="center">33</td>
 <td align="center">NC</td>
 </tr>
 <tr class="even">
 <td align="center">16</td>
-<td align="center">NC</td>
+<td align="center">DO/AUTO CONNECT ENABLED</td>
 <td align="center">¦</td>
 <td align="center">34</td>
 <td align="center">NC</td>
 </tr>
 <tr class="odd">
 <td align="center">17</td>
-<td align="center">NC</td>
+<td align="center">DO/AUTOENABLE RULE ACTIV</td>
 <td align="center">¦</td>
 <td align="center">35</td>
 <td align="center">NC</td>
@@ -553,7 +560,6 @@ CAUTION: it has to be the 2019 SP1 version</li>
 </tr>
 </tbody>
 </table>
-<p>It is possible to automatically connect too up to 3 predefined toolholders with digital signals on the PIN 19 &amp; 20 of the digital module. (ID3 = ID1 + ID2)</p>
 <p><img src="assets/NI-9375-Verkabelung.png" alt="Verkabelung_en" /></p>
 </div>
 </div>
@@ -631,21 +637,24 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 <li>recording of the data</li>
 <li>using the rule engine</li>
 </ul>
-<p>are wanted to be used individually it is needed to implement more digital outputs in the machine. For the recording of data and the activation of the rule engine you need 1 digital output each. At the moment the system can connect up to 3 holders automatically with 2 digital outputs. Therefore a maximum of 4 digital outputs are needed in the machine.</p>
+<p>are wanted to be used individually it is needed to implement more digital outputs in the machine. For the recording of data and the activation of the rule engine you need 1 digital output each. At the moment the system can connect up to 255 holders/rules automatically with 8 digital outputs and 1 digital output to activate the connection. Therefore a maximum of 11 digital outputs are needed in the machine.</p>
 </div>
 </div>
 </div>
-<div id="implementation-of-up-to-5-digital-input-channel" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Implementation of up to 5 digital input channel<a href="#implementation-of-up-to-5-digital-input-channel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="implementation-of-up-to-8-digital-input-channel" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Implementation of up to 8 digital input channel<a href="#implementation-of-up-to-8-digital-input-channel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="also-via-synchronised-action-to-provide-information-of-the-icotronic-system-status-to-the-machine" class="section level4 unnumbered hasAnchor">
 <h4>(also via synchronised action) to provide information of the ICOtronic system status to the machine<a href="#also-via-synchronised-action-to-provide-information-of-the-icotronic-system-status-to-the-machine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>These are all optional. The 5 digital inputs in the machine can be used to see the following status information of the ICOtronic system if wired:</p>
+<p>These are all optional. The 8 digital inputs in the machine can be used to see the following status information of the ICOtronic system if wired:</p>
 <ul>
 <li>Is the system active</li>
 <li>Is the system connected to a holder</li>
 <li>Is the system recording</li>
 <li>Is the rule engine active</li>
 <li>Is the system interfering with the machine overrides</li>
+<li>Is the system running in Dashboard Control Mode</li>
+<li>Is the auto connect function enabled</li>
+<li>Is the auto enable Rule activated</li>
 </ul>
 </div>
 </div>
@@ -712,35 +721,63 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 <td>The firmware supports up to 255 holders to be connected via this function =&gt; max. +8 digital outputs</td>
 </tr>
 <tr class="odd">
+<td>Start the connection to defined holder/rule</td>
+<td>0</td>
+<td>+1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
 <td>SPU feedback to machine: System active</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SPU feedback to machine: Holder connected</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SPU feedback to machine: Recording active</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SPU feedback to machine: Rule engine active</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SPU feedback to machine: SPU interfering with the overrides</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU feedback to machine: Dashboard control activ</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SPU feedback to machine: Auto connect enabled</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU feedback to machine: Auto enable of rule active</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
@@ -749,8 +786,8 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 <tr class="even">
 <td>ALL FUNCTIONS</td>
 <td>3</td>
-<td>10</td>
-<td>5</td>
+<td>11</td>
+<td>8</td>
 <td>All functions used and connectable to max. 255 holders</td>
 </tr>
 </tbody>
@@ -767,7 +804,7 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 </div>
 <div id="using-the-machine-with-3-different-holders-to-record-and-get-feedback-into-the-machine-if-the-system-is-active-connected-to-a-holder-and-recording" class="section level4 unnumbered hasAnchor">
 <h4>Using the machine with 3 different holders to record and get feedback into the machine if the system is active, connected to a holder and recording<a href="#using-the-machine-with-3-different-holders-to-record-and-get-feedback-into-the-machine-if-the-system-is-active-connected-to-a-holder-and-recording" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In this scenario you need 3 digital outputs and 3 digital inputs on the machine. 2 digital outputs are used to connect/disconnect to up to 3 holders. 1 digital output is used to start/stop the recording. 1 of the digital inputs is used for the information if the SPU is active, 1 digital input is used for the information if a holder is currently connected to the system and 1 digital input is used for the information if the system is recording at the moment.</p>
+<p>In this scenario you need 4 digital outputs and 3 digital inputs on the machine. 2 digital outputs are used to connect/disconnect to up to 3 holders. 1 digital output to start the connection. 1 digital output is used to start/stop the recording. 1 of the digital inputs is used for the information if the SPU is active, 1 digital input is used for the information if a holder is currently connected to the system and 1 digital input is used for the information if the system is recording at the moment.</p>
 </div>
 <div id="using-the-rule-engine-to-influence-the-overrides-without-feedback-from-the-spu-with-1-holder-and-no-recording" class="section level4 unnumbered hasAnchor">
 <h4>Using the rule engine to influence the overrides without feedback from the SPU with 1 holder and no recording<a href="#using-the-rule-engine-to-influence-the-overrides-without-feedback-from-the-spu-with-1-holder-and-no-recording" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -775,7 +812,7 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 </div>
 <div id="using-the-rule-engine-to-influence-the-overrides-with-feedback-from-the-spu-with-2-holders-and-recording" class="section level4 unnumbered hasAnchor">
 <h4>Using the rule engine to influence the overrides with feedback from the SPU with 2 holders and recording<a href="#using-the-rule-engine-to-influence-the-overrides-with-feedback-from-the-spu-with-2-holders-and-recording" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In this scenario you need 2 analogue inputs, 4 digital outputs and 5 digital inputs on the machine. 2 analogue inputs, 1 for the feed override and 1 for the spindle speed override values. 2 digital output are needed to connect to the 2 holder, 1 digital output is needed to start the recording and 1 digital output is needed to activate the rule engine through the machine. 1 digital input is needed for the information if the SPU is active, 1 digital input is needed for the information if a holder is connected to the system, 1 digital input is needed for the information if the system is recording at the moment, 1 digital input is needed for the information if the rule engine is enabled and 1 digital input is needed to get the information if the system is interfering with the overrides at the moment.</p>
+<p>In this scenario you need 2 analogue inputs, 5 digital outputs and 5 digital inputs on the machine. 2 analogue inputs, 1 for the feed override and 1 for the spindle speed override values. 2 digital output are needed to connect to the 2 holder, 1 digital output to start the connection, 1 digital output is needed to start the recording and 1 digital output is needed to activate the rule engine through the machine. 1 digital input is needed for the information if the SPU is active, 1 digital input is needed for the information if a holder is connected to the system, 1 digital input is needed for the information if the system is recording at the moment, 1 digital input is needed for the information if the rule engine is enabled and 1 digital input is needed to get the information if the system is interfering with the overrides at the moment.</p>
 </div>
 <div id="using-opcua-for-system-control-without-changing-the-overrides" class="section level4 unnumbered hasAnchor">
 <h4>Using OPCUA for system control without changing the overrides<a href="#using-opcua-for-system-control-without-changing-the-overrides" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -798,8 +835,8 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 </div>
 <div id="version-1" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">10</span> Version<a href="#version-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Diese Anleitung wurde geschrieben für eine SPU mit Dashboardversion v4.0.1.4. Für eine Installationsanleitung von älteren Versionen siehe nachstehenden Link:</p>
-<p><a href="https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20de.md">Ältere Version</a></p>
+<p>Diese Anleitung wurde geschrieben für eine SPU mit Dashboardversion v5.3.0.4. Für eine Installationsanleitung von älteren Versionen siehe nachstehenden Link:</p>
+<p><a href="https://github.com/MyTooliT/ICOcrt_Installation/blob/main/ICOcrt_Installation_de.md">Ältere Version</a></p>
 </div>
 <div id="system-komponenten" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">11</span> System Komponenten<a href="#system-komponenten" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -808,7 +845,6 @@ When the STU is connected to power and not connected to a STH, the green LEDs in
 <li>Sensory Tool Holder (STH)</li>
 <li>Signal Processing Unit (SPU)</li>
 <li>Stationary Transceiver Unit (STU)</li>
-<li>Charging Cradle (CC)</li>
 </ul>
 <p><img src="assets/icocrtl.png" alt="icocrtl" /></p>
 </div>
@@ -1017,6 +1053,13 @@ Der richtige Steckplatz des Steuersignals im Schaltschrank muss vor der Installa
 <div id="digitaler-eingang-ausgang-ni-9375" class="section level4 unnumbered hasAnchor">
 <h4>Digitaler Eingang &amp; Ausgang (NI 9375):<a href="#digitaler-eingang-ausgang-ni-9375" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table>
+<colgroup>
+<col width="7%" />
+<col width="40%" />
+<col width="11%" />
+<col width="10%" />
+<col width="30%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">PIN</th>
@@ -1029,10 +1072,10 @@ Der richtige Steckplatz des Steuersignals im Schaltschrank muss vor der Installa
 <tbody>
 <tr class="odd">
 <td align="center">1</td>
-<td align="center">DI/ACTIVATE RULE</td>
+<td align="center">DI/CONNECT</td>
 <td align="center">¦</td>
 <td align="center">19</td>
-<td align="center">DI/CONNECT-ID1</td>
+<td align="center">DI/CONNECT-ID1(LSB)</td>
 </tr>
 <tr class="even">
 <td align="center">2</td>
@@ -1043,108 +1086,108 @@ Der richtige Steckplatz des Steuersignals im Schaltschrank muss vor der Installa
 </tr>
 <tr class="odd">
 <td align="center">3</td>
-<td align="center">NB</td>
+<td align="center">DI/ACTIVATE RULE</td>
 <td align="center">¦</td>
 <td align="center">21</td>
-<td align="center">NB</td>
+<td align="center">DI/CONNECT-ID3</td>
 </tr>
 <tr class="even">
 <td align="center">4</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">22</td>
-<td align="center">NB</td>
+<td align="center">DI/CONNECT-ID4</td>
 </tr>
 <tr class="odd">
 <td align="center">5</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">23</td>
-<td align="center">NB</td>
+<td align="center">DI/CONNECT-ID5</td>
 </tr>
 <tr class="even">
 <td align="center">6</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">24</td>
-<td align="center">NB</td>
+<td align="center">DI/CONNECT-ID6</td>
 </tr>
 <tr class="odd">
 <td align="center">7</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">25</td>
-<td align="center">NB</td>
+<td align="center">DI/CONNECT-ID7</td>
 </tr>
 <tr class="even">
 <td align="center">8</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 <td align="center">¦</td>
 <td align="center">26</td>
-<td align="center">NB</td>
+<td align="center">DI/CONNECT-ID8(MSB)</td>
 </tr>
 <tr class="odd">
 <td align="center">9</td>
 <td align="center">GND</td>
 <td align="center">¦</td>
 <td align="center">27</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="even">
 <td align="center">10</td>
 <td align="center">DO/SYSTEM ACTIV</td>
 <td align="center">¦</td>
 <td align="center">28</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="odd">
 <td align="center">11</td>
 <td align="center">DO/CONNECTED</td>
 <td align="center">¦</td>
 <td align="center">29</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="even">
 <td align="center">12</td>
 <td align="center">DO/RECORDING</td>
 <td align="center">¦</td>
 <td align="center">30</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="odd">
 <td align="center">13</td>
 <td align="center">DO/RULE ENABLED</td>
 <td align="center">¦</td>
 <td align="center">31</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="even">
 <td align="center">14</td>
 <td align="center">DO/INTERFERENCE</td>
 <td align="center">¦</td>
 <td align="center">32</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="odd">
 <td align="center">15</td>
-<td align="center">NB</td>
+<td align="center">DO/DASHBOARD CONTROL ACTIV</td>
 <td align="center">¦</td>
 <td align="center">33</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="even">
 <td align="center">16</td>
-<td align="center">NB</td>
+<td align="center">DO/AUTO CONNECT ENABLED</td>
 <td align="center">¦</td>
 <td align="center">34</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="odd">
 <td align="center">17</td>
-<td align="center">NB</td>
+<td align="center">DO/AUTOENABLE RULE ACTIV</td>
 <td align="center">¦</td>
 <td align="center">35</td>
-<td align="center">NB</td>
+<td align="center">NC</td>
 </tr>
 <tr class="even">
 <td align="center">18</td>
@@ -1155,7 +1198,6 @@ Der richtige Steckplatz des Steuersignals im Schaltschrank muss vor der Installa
 </tr>
 </tbody>
 </table>
-<p>Die SPU kann mittels der digitalen Eingänge auf Pin 19&amp;20 bis zu 3 zuvor im Dashboard definierte Halter automatisch verbinden. (ID3 = ID1 + ID2)</p>
 <p><img src="assets/NI-9375-Verkabelung.png" alt="Verkabelung_de" /></p>
 </div>
 </div>
@@ -1233,21 +1275,24 @@ Mit Aufruf der M-Funktion M190 im Teileprogramm wird ein digitaler Ausgang gesch
 <li>Regelung aktivieren</li>
 </ul>
 <p>einzeln benutzt werden sollen dann müssen mehr digitale Ausgänge an der Steuerung implementiert werden.
-Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Ausgang benötigt. Für die Verbindung zu zuvor definierten Haltern können momentan 3 verschiedene Halter mittels 2 digitalen Ausgängen angesprochen werden. Daher ergibt sich eine momentane Anzahl von maximal 4 benötigten digitalen Ausgängen der Maschinensteuerung.</p>
+Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Ausgang benötigt. Für die Verbindung zu zuvor definierten Haltern können momentan 255 verschiedene Halter/Regeln mittels 8 digitalen Ausgängen angesprochen werden und 1 digitalen Ausgang um die Verbindung zu aktivieren. Daher ergibt sich eine momentane Anzahl von maximal 11 benötigten digitalen Ausgängen der Maschinensteuerung.</p>
 </div>
 </div>
 </div>
-<div id="implementierung-von-bis-zu-5-digitalen-eingängen" class="section level2 hasAnchor" number="18.3">
-<h2><span class="header-section-number">18.3</span> Implementierung von bis zu 5 digitalen Eingängen<a href="#implementierung-von-bis-zu-5-digitalen-eingängen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="implementierung-von-bis-zu-8-digitalen-eingängen" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Implementierung von bis zu 8 digitalen Eingängen<a href="#implementierung-von-bis-zu-8-digitalen-eingängen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="ebenfalls-über-synchronaktionen-zur-informationsabfrage-der-icotronic-systems-statusinformationen-in-der-maschine" class="section level4 unnumbered hasAnchor">
 <h4>(ebenfalls über Synchronaktionen) zur Informationsabfrage der ICOtronic Systems Statusinformationen in der Maschine<a href="#ebenfalls-über-synchronaktionen-zur-informationsabfrage-der-icotronic-systems-statusinformationen-in-der-maschine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Die Implementierung dieser Signale ist optional. Bis zu 5 digitale Eingänge der Maschine können genutzt werden um die folgenden Statusinformationen des ICOtronic Systems zu bekommen:</p>
+<p>Die Implementierung dieser Signale ist optional. Bis zu 8 digitale Eingänge der Maschine können genutzt werden um die folgenden Statusinformationen des ICOtronic Systems zu bekommen:</p>
 <ul>
 <li>Ist das System aktiv</li>
 <li>Ist das System verbunden mit einem Halter</li>
 <li>Nimmt das System gerade Daten auf</li>
 <li>Ist die Regelung durch das System gerade aktiv</li>
 <li>Greift das System gerade aktiv in die Overrides der Maschine ein</li>
+<li>Läuft das System im Dashboard Modus</li>
+<li>Ist die automatische Verbindungsfunktion aktiviert</li>
+<li>Ist die automatische Regelaktivierung aktiviert</li>
 </ul>
 </div>
 </div>
@@ -1314,35 +1359,63 @@ Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Au
 <td>Es sind maximal 255 Halter mittels Signalen von der Maschine verbindbar =&gt; Max. +8 Digitale Ausgänge</td>
 </tr>
 <tr class="odd">
+<td>Verbindung zu definiertem Halter/Regel aufbauen</td>
+<td>0</td>
+<td>+1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="even">
 <td>SPU Rückmeldung an Maschine: System aktiv</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SPU Rückmeldung an Maschine: Halter verbunden</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SPU Rückmeldung an Maschine: Aufnahme läuft</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SPU Rückmeldung an Maschine: Rule engine aktiv</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SPU Rückmeldung an Maschine: Overrides werden überschrieben</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU Rückmeldung an Maschine: Dashboard Regelung ist aktiv</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>SPU Rückmeldung an Maschine: Automatische Verbindung ist aktiviert</td>
+<td>0</td>
+<td>0</td>
+<td>+1</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SPU Rückmeldung an Maschine: Rule engine ist automatisch aktiviert</td>
 <td>0</td>
 <td>0</td>
 <td>+1</td>
@@ -1351,8 +1424,8 @@ Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Au
 <tr class="even">
 <td>ALLE FUNKTIONEN</td>
 <td>3</td>
-<td>10</td>
-<td>5</td>
+<td>11</td>
+<td>8</td>
 <td>Alle Funktionen ausgewählt und maximal unterstützte 255 Halter</td>
 </tr>
 </tbody>
@@ -1369,7 +1442,7 @@ Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Au
 </div>
 <div id="verwendung-der-maschine-mit-3-verschiedenen-haltern-zum-aufnehmen-und-rückmeldungen-an-die-maschine-ob-das-system-aktiv-ist-mit-einem-halter-verbunden-ist-und-gerade-eine-aufnahmen-gemacht-wird" class="section level4 unnumbered hasAnchor">
 <h4>Verwendung der Maschine mit 3 verschiedenen Haltern zum Aufnehmen und Rückmeldungen an die Maschine ob das System aktiv ist, mit einem Halter verbunden ist und gerade eine Aufnahmen gemacht wird<a href="#verwendung-der-maschine-mit-3-verschiedenen-haltern-zum-aufnehmen-und-rückmeldungen-an-die-maschine-ob-das-system-aktiv-ist-mit-einem-halter-verbunden-ist-und-gerade-eine-aufnahmen-gemacht-wird" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In diesem Szenario benötigen Sie 3 digitale Ausgänge und 3 digitale Eingänge an der Maschine. 2 digitale Ausgänge werden verwendet, um bis zu 3 Halter zu verbinden/trennen. 1 digitaler Ausgang wird verwendet, um die Aufnahme zu starten/stoppen. 1 der digitalen Eingänge wird für die Information verwendet, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter derzeit mit dem System verbunden ist, und 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht.</p>
+<p>In diesem Szenario benötigen Sie 4 digitale Ausgänge und 3 digitale Eingänge an der Maschine. 2 digitale Ausgänge werden verwendet, um bis zu 3 Halter zu verbinden/trennen. 1 digitaler Ausgang wird verwendet, um die Verbindung zu starten. 1 digitaler Ausgang wird verwendet, um die Aufnahme zu starten/stoppen. 1 der digitalen Eingänge wird für die Information verwendet, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter derzeit mit dem System verbunden ist, und 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht.</p>
 </div>
 <div id="verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-1-halter-ohne-rückmeldungen-von-der-spu-und-ohne-aufnahme" class="section level4 unnumbered hasAnchor">
 <h4>Verwendung der Rule-Engine zur Beeinflussung der Overrides mit 1 Halter ohne Rückmeldungen von der SPU und ohne Aufnahme<a href="#verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-1-halter-ohne-rückmeldungen-von-der-spu-und-ohne-aufnahme" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -1377,7 +1450,7 @@ Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Au
 </div>
 <div id="verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-2-haltern-mit-rückmeldung-von-der-spu-und-aufnahmen" class="section level4 unnumbered hasAnchor">
 <h4>Verwendung der Rule-Engine zur Beeinflussung der Overrides, mit 2 Haltern, mit Rückmeldung von der SPU und Aufnahmen<a href="#verwendung-der-rule-engine-zur-beeinflussung-der-overrides-mit-2-haltern-mit-rückmeldung-von-der-spu-und-aufnahmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>In diesem Szenario benötigen Sie 2 analoge Eingänge, 4 digitale Ausgänge und 5 digitale Eingänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 2 digitale Ausgänge werden benötigt, um 2 Halter zu verbinden. 1 digitaler Ausgang wird benötigt, um die Aufnahme zu starten, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren. 1 digitaler Eingang wird für die Information benötigt, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter mit dem System verbunden ist, 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht, 1 digitaler Eingang für die Information, ob die Rule-Engine aktiviert ist, und 1 digitaler Eingang, um die Information zu erhalten, ob das System gerade die Overrides beeinträchtigt.</p>
+<p>In diesem Szenario benötigen Sie 2 analoge Eingänge, 5 digitale Ausgänge und 5 digitale Eingänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 2 digitale Ausgänge werden benötigt, um 2 Halter zu verbinden. 1 digitaler Ausgang wird verwendet um die Verbindung zu starten. 1 digitaler Ausgang wird benötigt, um die Aufnahme zu starten, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren. 1 digitaler Eingang wird für die Information benötigt, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter mit dem System verbunden ist, 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht, 1 digitaler Eingang für die Information, ob die Rule-Engine aktiviert ist, und 1 digitaler Eingang, um die Information zu erhalten, ob das System gerade die Overrides beeinträchtigt.</p>
 </div>
 <div id="verwendung-von-opcua-zur-systemsteuerung-ohne-änderung-der-overrides" class="section level4 unnumbered hasAnchor">
 <h4>Verwendung von OPCUA zur Systemsteuerung ohne Änderung der Overrides<a href="#verwendung-von-opcua-zur-systemsteuerung-ohne-änderung-der-overrides" class="anchor-section" aria-label="Anchor link to header"></a></h4>
