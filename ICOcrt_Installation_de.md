@@ -5,9 +5,9 @@ Installationsanleitung für das ICOtronic Control System
 
 # Version
 
-Diese Anleitung wurde geschrieben für eine SPU mit Dashboardversion v4.0.1.4. Für eine Installationsanleitung von älteren Versionen siehe nachstehenden Link:
+Diese Anleitung wurde geschrieben für eine SPU mit Dashboardversion v5.3.0.4. Für eine Installationsanleitung von älteren Versionen siehe nachstehenden Link:
 
-[Ältere Version](https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20de.md)
+[Ältere Version](https://github.com/MyTooliT/ICOcrt_Installation/blob/main/ICOcrt_Installation_de.md)
 
 # System Komponenten 					  			
 
@@ -16,7 +16,6 @@ Die nachfolgende Grafik verleiht einen Überblick über die Komponenten des ICOt
 - Sensory Tool Holder (STH)
 - Signal Processing Unit (SPU)
 - Stationary Transceiver Unit (STU)
-- Charging Cradle (CC)
 
 ![icocrtl](assets/icocrtl.png)
 
@@ -159,28 +158,27 @@ Der berechnete IFT-Wert, der Auskunft über die Stabilität des Systems liefert,
 
 #### Digitaler Eingang & Ausgang (NI 9375): {-}
 
-| PIN | SIGNAL           |&brvbar;| PIN   | SIGNAL         |
-|:---:|:----------------:|:------:|:-----:|:--------------:|
-| 1   | DI/ACTIVATE RULE |&brvbar;| 19    | DI/CONNECT-ID1 |
-| 2   | DI/RECORD        |&brvbar;| 20    | DI/CONNECT-ID2 |
-| 3   | NB               |&brvbar;| 21    | NB             |
-| 4   | NB               |&brvbar;| 22    | NB             |
-| 5   | NB               |&brvbar;| 23    | NB             |
-| 6   | NB               |&brvbar;| 24    | NB             |
-| 7   | NB               |&brvbar;| 25    | NB             |
-| 8   | NB               |&brvbar;| 26    | NB             |
-| 9   | GND              |&brvbar;| 27    | NB             |
-| 10  | DO/SYSTEM ACTIV  |&brvbar;| 28    | NB             |
-| 11  | DO/CONNECTED     |&brvbar;| 29    | NB             |
-| 12  | DO/RECORDING     |&brvbar;| 30    | NB             |
-| 13  | DO/RULE ENABLED  |&brvbar;| 31    | NB             |
-| 14  | DO/INTERFERENCE  |&brvbar;| 32    | NB             |
-| 15  | NB               |&brvbar;| 33    | NB             |
-| 16  | NB               |&brvbar;| 34    | NB             |
-| 17  | NB               |&brvbar;| 35    | NB             |
-| 18  | GND              |&brvbar;| 36    | +24V           |
+| PIN | SIGNAL                     |&brvbar;| PIN   | SIGNAL              |
+|:---:|:--------------------------:|:------:|:-----:|:-------------------:|
+| 1   | DI/CONNECT                 |&brvbar;| 19    | DI/CONNECT-ID1(LSB) |
+| 2   | DI/RECORD                  |&brvbar;| 20    | DI/CONNECT-ID2      |
+| 3   | DI/ACTIVATE RULE           |&brvbar;| 21    | DI/CONNECT-ID3      |
+| 4   | NC                         |&brvbar;| 22    | DI/CONNECT-ID4      |
+| 5   | NC                         |&brvbar;| 23    | DI/CONNECT-ID5      |
+| 6   | NC                         |&brvbar;| 24    | DI/CONNECT-ID6      |
+| 7   | NC                         |&brvbar;| 25    | DI/CONNECT-ID7      |
+| 8   | NC                         |&brvbar;| 26    | DI/CONNECT-ID8(MSB) |
+| 9   | GND                        |&brvbar;| 27    | NC                  |
+| 10  | DO/SYSTEM ACTIV            |&brvbar;| 28    | NC                  |
+| 11  | DO/CONNECTED               |&brvbar;| 29    | NC                  |
+| 12  | DO/RECORDING               |&brvbar;| 30    | NC                  |
+| 13  | DO/RULE ENABLED            |&brvbar;| 31    | NC                  |
+| 14  | DO/INTERFERENCE            |&brvbar;| 32    | NC                  |
+| 15  | DO/DASHBOARD CONTROL ACTIV |&brvbar;| 33    | NC                  |
+| 16  | DO/AUTO CONNECT ENABLED    |&brvbar;| 34    | NC                  |
+| 17  | DO/AUTOENABLE RULE ACTIV   |&brvbar;| 35    | NC                  |
+| 18  | GND                        |&brvbar;| 36    | +24V                |
 
-Die SPU kann mittels der digitalen Eingänge auf Pin 19&20 bis zu 3 zuvor im Dashboard definierte Halter automatisch verbinden. (ID3 = ID1 + ID2)
 
  ![Verkabelung_de](assets/NI-9375-Verkabelung.png)
 

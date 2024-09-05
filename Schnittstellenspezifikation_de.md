@@ -24,18 +24,21 @@ Wenn die verschiedenen Funktionen:
 - Regelung aktivieren
 
 einzeln benutzt werden sollen dann müssen mehr digitale Ausgänge an der Steuerung implementiert werden.
-Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Ausgang benötigt. Für die Verbindung zu zuvor definierten Haltern können momentan 3 verschiedene Halter mittels 2 digitalen Ausgängen angesprochen werden. Daher ergibt sich eine momentane Anzahl von maximal 4 benötigten digitalen Ausgängen der Maschinensteuerung.
+Für die Datenaufnahme und die Regelung aktivieren werden jeweils 1 digitaler Ausgang benötigt. Für die Verbindung zu zuvor definierten Haltern können momentan 255 verschiedene Halter/Regeln mittels 8 digitalen Ausgängen angesprochen werden und 1 digitalen Ausgang um die Verbindung zu aktivieren. Daher ergibt sich eine momentane Anzahl von maximal 11 benötigten digitalen Ausgängen der Maschinensteuerung.
 
-## Implementierung von bis zu 5 digitalen Eingängen
+## Implementierung von bis zu 8 digitalen Eingängen
 #### (ebenfalls über Synchronaktionen) zur Informationsabfrage der ICOtronic Systems Statusinformationen in der Maschine {-}
 
-Die Implementierung dieser Signale ist optional. Bis zu 5 digitale Eingänge der Maschine können genutzt werden um die folgenden Statusinformationen des ICOtronic Systems zu bekommen:
+Die Implementierung dieser Signale ist optional. Bis zu 8 digitale Eingänge der Maschine können genutzt werden um die folgenden Statusinformationen des ICOtronic Systems zu bekommen:
 
 - Ist das System aktiv
 - Ist das System verbunden mit einem Halter
 - Nimmt das System gerade Daten auf
 - Ist die Regelung durch das System gerade aktiv
 - Greift das System gerade aktiv in die Overrides der Maschine ein
+- Läuft das System im Dashboard Modus
+- Ist die automatische Verbindungsfunktion aktiviert
+- Ist die automatische Regelaktivierung aktiviert
 
 ## Funktionen und deren benötigte Maschinen Ports
 
@@ -47,12 +50,16 @@ Die Implementierung dieser Signale ist optional. Bis zu 5 digitale Eingänge der
 |Aufnahme durch Maschine starten|0|+1|0||
 |Rule engine durch Maschine aktivieren|0|+1|0||
 |Halter durch Maschine verbinden|0|+log<sub>2</sub>(Halteranzahl)+1|0|Es sind maximal 255 Halter mittels Signalen von der Maschine verbindbar => Max. +8 Digitale Ausgänge|
+|Verbindung zu definiertem Halter/Regel aufbauen|0|+1|0||
 |SPU Rückmeldung an Maschine: System aktiv|0|0|+1||
 |SPU Rückmeldung an Maschine: Halter verbunden|0|0|+1||
 |SPU Rückmeldung an Maschine: Aufnahme läuft|0|0|+1||
 |SPU Rückmeldung an Maschine: Rule engine aktiv|0|0|+1||
 |SPU Rückmeldung an Maschine: Overrides werden überschrieben|0|0|+1||
-|ALLE FUNKTIONEN|3|10|5|Alle Funktionen ausgewählt und maximal unterstützte 255 Halter|
+|SPU Rückmeldung an Maschine: Dashboard Regelung ist aktiv|0|0|+1||
+|SPU Rückmeldung an Maschine: Automatische Verbindung ist aktiviert|0|0|+1||
+|SPU Rückmeldung an Maschine: Rule engine ist automatisch aktiviert|0|0|+1||
+|ALLE FUNKTIONEN|3|11|8|Alle Funktionen ausgewählt und maximal unterstützte 255 Halter|
 
 ### Beispiele
 
@@ -66,7 +73,7 @@ In diesem Szenario benötigen Sie 2 digitale Ausgänge an der Maschine. Ein digi
 
 #### Verwendung der Maschine mit 3 verschiedenen Haltern zum Aufnehmen und Rückmeldungen an die Maschine ob das System aktiv ist, mit einem Halter verbunden ist und gerade eine Aufnahmen gemacht wird {-}
 
-In diesem Szenario benötigen Sie 3 digitale Ausgänge und 3 digitale Eingänge an der Maschine. 2 digitale Ausgänge werden verwendet, um bis zu 3 Halter zu verbinden/trennen. 1 digitaler Ausgang wird verwendet, um die Aufnahme zu starten/stoppen. 1 der digitalen Eingänge wird für die Information verwendet, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter derzeit mit dem System verbunden ist, und 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht.
+In diesem Szenario benötigen Sie 4 digitale Ausgänge und 3 digitale Eingänge an der Maschine. 2 digitale Ausgänge werden verwendet, um bis zu 3 Halter zu verbinden/trennen. 1 digitaler Ausgang wird verwendet, um die Verbindung zu starten. 1 digitaler Ausgang wird verwendet, um die Aufnahme zu starten/stoppen. 1 der digitalen Eingänge wird für die Information verwendet, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter derzeit mit dem System verbunden ist, und 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht.
 
 #### Verwendung der Rule-Engine zur Beeinflussung der Overrides mit 1 Halter ohne Rückmeldungen von der SPU und ohne Aufnahme {-}
 
@@ -74,7 +81,7 @@ In diesem Szenario benötigen Sie 2 analoge Eingänge und 2 digitale Ausgänge a
 
 #### Verwendung der Rule-Engine zur Beeinflussung der Overrides, mit 2 Haltern, mit Rückmeldung von der SPU und Aufnahmen {-}
 
-In diesem Szenario benötigen Sie 2 analoge Eingänge, 4 digitale Ausgänge und 5 digitale Eingänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 2 digitale Ausgänge werden benötigt, um 2 Halter zu verbinden. 1 digitaler Ausgang wird benötigt, um die Aufnahme zu starten, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren. 1 digitaler Eingang wird für die Information benötigt, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter mit dem System verbunden ist, 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht, 1 digitaler Eingang für die Information, ob die Rule-Engine aktiviert ist, und 1 digitaler Eingang, um die Information zu erhalten, ob das System gerade die Overrides beeinträchtigt.
+In diesem Szenario benötigen Sie 2 analoge Eingänge, 5 digitale Ausgänge und 5 digitale Eingänge an der Maschine. 2 analoge Eingänge, einer für den Vorschub-Override und einer für den Drehzahl-Override. 2 digitale Ausgänge werden benötigt, um 2 Halter zu verbinden. 1 digitaler Ausgang wird verwendet um die Verbindung zu starten. 1 digitaler Ausgang wird benötigt, um die Aufnahme zu starten, und 1 digitaler Ausgang, um die Rule-Engine über die Maschine zu aktivieren. 1 digitaler Eingang wird für die Information benötigt, ob die SPU aktiv ist, 1 digitaler Eingang für die Information, ob ein Halter mit dem System verbunden ist, 1 digitaler Eingang für die Information, ob das System gerade eine Datenaufnahme macht, 1 digitaler Eingang für die Information, ob die Rule-Engine aktiviert ist, und 1 digitaler Eingang, um die Information zu erhalten, ob das System gerade die Overrides beeinträchtigt.
 
 #### Verwendung von OPCUA zur Systemsteuerung ohne Änderung der Overrides {-}
 

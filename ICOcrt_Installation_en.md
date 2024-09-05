@@ -5,9 +5,9 @@ Installation manual for ICOtronic control system
 
 # Version
 
-This manual was written for SPUs with a Dashboard version v4.0.1.4. If you need an installation manual for an older version see the following link:
+This manual was written for SPUs with a Dashboard version v5.3.0.4. If you need an installation manual for an older version see the following link:
 
-[older version](https://github.com/MyTooliT/ICOcrt_Installation/blob/older_than_4_0_1_4/ICOcrt%20Installation%20en.md)
+[older version](https://github.com/MyTooliT/ICOcrt_Installation/blob/main/ICOcrt_Installation_en.md)
 
 # System Components 						  			
 
@@ -16,7 +16,6 @@ The main components for the ICOtronic control system are shown in the figure bel
 - the Sensory Tool Holder (STH), which features the acceleration sensor, a transceiver and a battery
 - the Stationary Transceiver Unit (STU), which is located inside the machine room
 - the Signal Processing Unit (SPU), which is connected to the STU via cable and must be located outside the machine room
-- the Charging Cradle (CC), which is used for charging the battery of the STH
 
 ![icocrtl](assets/icocrtl.png)
 
@@ -31,6 +30,7 @@ This document describes the installation of the ICOtronic Control System.
 - Signal Processing Unit – SPU
 - Sensory Tool Holder – STH
 - Stationary Transceiver Unit - STU (~10m cable length - depending on the machine tool)
+- Optional: Extension cable for the STU (7m)
 
 ## Required materials and tools 		
 
@@ -160,28 +160,27 @@ The calculated IFT-Value, which represents the stability of the process  regardi
 
 #### Digital IN & OUT (NI 9375): {-}
 
-| PIN | SIGNAL           |&brvbar;| PIN   | SIGNAL         |
-|:---:|:----------------:|:------:|:-----:|:--------------:|
-| 1   | DI/ACTIVATE RULE |&brvbar;| 19    | DI/CONNECT-ID1 |
-| 2   | DI/RECORD        |&brvbar;| 20    | DI/CONNECT-ID2 |
-| 3   | NC               |&brvbar;| 21    | NC             |
-| 4   | NC               |&brvbar;| 22    | NC             |
-| 5   | NC               |&brvbar;| 23    | NC             |
-| 6   | NC               |&brvbar;| 24    | NC             |
-| 7   | NC               |&brvbar;| 25    | NC             |
-| 8   | NC               |&brvbar;| 26    | NC             |
-| 9   | GND              |&brvbar;| 27    | NC             |
-| 10  | DO/SYSTEM ACTIV  |&brvbar;| 28    | NC             |
-| 11  | DO/CONNECTED     |&brvbar;| 29    | NC             |
-| 12  | DO/RECORDING     |&brvbar;| 30    | NC             |
-| 13  | DO/RULE ENABLED  |&brvbar;| 31    | NC             |
-| 14  | DO/INTERFERENCE  |&brvbar;| 32    | NC             |
-| 15  | NC               |&brvbar;| 33    | NC             |
-| 16  | NC               |&brvbar;| 34    | NC             |
-| 17  | NC               |&brvbar;| 35    | NC             |
-| 18  | GND              |&brvbar;| 36    | +24V           |
+| PIN | SIGNAL                     |&brvbar;| PIN   | SIGNAL              |
+|:---:|:--------------------------:|:------:|:-----:|:-------------------:|
+| 1   | DI/CONNECT                 |&brvbar;| 19    | DI/CONNECT-ID1(LSB) |
+| 2   | DI/RECORD                  |&brvbar;| 20    | DI/CONNECT-ID2      |
+| 3   | DI/ACTIVATE RULE           |&brvbar;| 21    | DI/CONNECT-ID3      |
+| 4   | NC                         |&brvbar;| 22    | DI/CONNECT-ID4      |
+| 5   | NC                         |&brvbar;| 23    | DI/CONNECT-ID5      |
+| 6   | NC                         |&brvbar;| 24    | DI/CONNECT-ID6      |
+| 7   | NC                         |&brvbar;| 25    | DI/CONNECT-ID7      |
+| 8   | NC                         |&brvbar;| 26    | DI/CONNECT-ID8(MSB) |
+| 9   | GND                        |&brvbar;| 27    | NC                  |
+| 10  | DO/SYSTEM ACTIV            |&brvbar;| 28    | NC                  |
+| 11  | DO/CONNECTED               |&brvbar;| 29    | NC                  |
+| 12  | DO/RECORDING               |&brvbar;| 30    | NC                  |
+| 13  | DO/RULE ENABLED            |&brvbar;| 31    | NC                  |
+| 14  | DO/INTERFERENCE            |&brvbar;| 32    | NC                  |
+| 15  | DO/DASHBOARD CONTROL ACTIV |&brvbar;| 33    | NC                  |
+| 16  | DO/AUTO CONNECT ENABLED    |&brvbar;| 34    | NC                  |
+| 17  | DO/AUTOENABLE RULE ACTIV   |&brvbar;| 35    | NC                  |
+| 18  | GND                        |&brvbar;| 36    | +24V                |
 
-It is possible to automatically connect too up to 3 predefined toolholders with digital signals on the PIN 19 & 20 of the digital module. (ID3 = ID1 + ID2)
 
 ![Verkabelung_en](assets/NI-9375-Verkabelung.png)
 
