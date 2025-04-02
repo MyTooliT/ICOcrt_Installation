@@ -1,10 +1,6 @@
 name: Documentation
 
-on:
-  push:
-     branches:
-       - main
-       - bookdown
+on: push
 
 jobs:
 
